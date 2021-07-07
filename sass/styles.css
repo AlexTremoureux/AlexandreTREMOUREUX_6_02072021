@@ -1,4 +1,61 @@
+/*Variables*/
 h1 {
-  color: black;
+  width: 20%;
+  color: #901C1C;
+}
+
+a {
+  text-decoration: none;
+  color: #D3573C;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+article {
+  text-align: center;
+  width: 300px;
+  height: 450px;
+  margin: 20px 100px 20px 100px;
+}
+
+#portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#localisation, #tags, #nav {
+  font-weight: bold;
+  color: #901C1C;
+}
+
+#tagline {
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */
