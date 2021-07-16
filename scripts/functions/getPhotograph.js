@@ -12,7 +12,7 @@ export const getPhotograph = async function () {
       container.innerHTML += 
       `<article id="photograph${photograph.id}">
         <section class="headerSection">
-          <a href="">
+          <a href="./photographPage.html">
             <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="">
             <h2 id="name">${photograph.name}</h2>
           </a>

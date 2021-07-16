@@ -26,8 +26,10 @@ export const getTags = async function () {
     //Ajout du listener avec appel à la fonction getPhotographFilter(filterName)
     let filterName ="";
     const nodeFilter = document.querySelectorAll(".navFilter");
+    console.log(nodeFilter)
     nodeFilter.forEach(filter => {
       filter.addEventListener("click", e => {
+        e.preventDefault();
         filterName = (filter.innerHTML.replace("#",""));
         getPhotographFilter(filterName)
       })

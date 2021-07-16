@@ -1,0 +1,88 @@
+@import "./variables.scss";
+header {
+    height: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.infoPhotograph {
+    display: flex;
+    margin: auto;
+    //justify-content: space-around;
+}
+.info {
+    display: flex;
+    width: 35%;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+}
+.contact {
+    width: 120px;
+    height: 40px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $color-secondary-4-font;
+    color: white;
+}
+#portrait {
+    width: 200px;
+    height: 200px;
+    margin: auto 10% auto auto;
+    border-radius: 50%;
+    object-fit: cover;
+    text-align: right;
+}
+h1 {
+    font-size: 3rem;
+    color: $color-primary-font;
+    margin: 0px;
+}
+h2 {
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    color: $color-primary-font;
+}
+li {
+    list-style: none;
+}
+ul {
+    display: flex;
+    justify-content: left;
+    padding-left: 0px;
+}
+#container {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+#localisation, #tags, #nav {
+    font-weight: bold;
+    color: $color-secondary-4-font;
+}
+#tagline {
+    font-weight: bold;
+}
+img {
+    width: 300px;
+    height: 300px;
+}
+#price {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    right: 10px;
+    width: 20%;
+    height: 50px;
+    background-color: $color-primary-font;
+    color: white;
+}
