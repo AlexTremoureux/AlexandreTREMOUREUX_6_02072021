@@ -1,8 +1,19 @@
 import { container , prod, dev, env} from "./constantes.js";
 
+let pId = window.location.search.split("-");
+let nbId= Number (pId[1]);
+let name = "";
+let firstName = "";
+let likes = [];
+let countLikes = 0;
 
+const title = document.getElementById("title");
+const popular = document.getElementById("popular");
+const date = document.getElementById("date");
+const titre = document.getElementById("titre");
+const price = document.getElementById("price")
 //Fonction getPhotographFilter venant fetch les données et remplir les articles filtrés par tags
-export const getPhotographer = async function (filter) {
+export const getPhotographer = async function (filterId) {
     let response = await fetch(dev)
     let data = await response.json()
     .catch(function (error) {
@@ -11,7 +22,12 @@ export const getPhotographer = async function (filter) {
     container.innerHTML = " ";
     //Boucle sur chaque photographe filtré afin de lui créer son propre article
     data.photographers.forEach(photograph => {
-        if (photograph.tags.includes(filter)) {
+        if (photograph.id === filterId) {
+             name = photograph.name.split(" ");
+             firstName = name [0];
+             firstName = firstName.replace("-" , " ");
+            title.innerHTML += 
+            ` ${photograph.name}`
             container.innerHTML += 
             `<article id="photograph${photograph.id}">
             <section class="infoPhotograph">
@@ -22,17 +38,28 @@ export const getPhotographer = async function (filter) {
                     <ul id="tagList${photograph.id}">
                     </ul>
                 </div>
-                <p class="contact">Contactez-moi</p>
+                <btn class="contact">Contactez-moi</btn>
                 <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="">
             </section>
             <section class="medias">
+                <div class="filter">
                 <h2>Trier par</h2>
-                <btn>popularité/date/titre</btn>
-                <ul id="medias">
+                <nav id="btnFilter">
+                    <li class="deroulant"><a id="popular" href="#">popularité</a>
+                    <ul class="sous">
+                        <li><a id="date" href="#">date</a></li>
+                        <li><a id="titre" href="#">titre</a></li>
+                    </ul>
+                    </li>
+                </nav>
+                </div>
+                <ul id="containerMedias">
                 </ul>
             </section>
-            <p id="price">${photograph.price}€/jour</p>
             </article>`;
+            price.innerHTML+=`
+            <p>${photograph.price}€ / jour</p>
+            `
             //Boucle forEach afin d'afficher les différents tags de chaques photographes
             let tagList = document.getElementById("tagList"+photograph.id);
             photograph.tags.forEach(tagsElement => {
@@ -51,22 +78,41 @@ export const getMedias = async function (id) {
       alert(error)
     })
     console.log(data)
-    const containerMedias = document.getElementById("medias")
-    let arraysMedias = []
+    const containerMedias = document.getElementById("containerMedias")
     data.media.forEach(mediaEl => {
-        console.log(mediaEl)
-        if (mediaEl.photographerId == 82) {
-            console.log(mediaEl.image)
+        if (mediaEl.photographerId == id && mediaEl.image) {
+            likes.push(mediaEl.likes);
             containerMedias.innerHTML += `
-            <li>
-                <img src="./Photos/Medias/Sample Photos/Tracy/${mediaEl.image}" alt="">
+            <li class="medias">
+                <img src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace("-", "")}" alt="">
+                <div class="infoMedias">
+                    <p>${mediaEl.title}</p> 
+                    <p>${mediaEl.likes} \u2764</p>
+                </div>
             </li>`
         }
-        arraysMedias.push(mediaEl.photographerId)
+        if (mediaEl.photographerId == id && mediaEl.video) {
+            likes.push(mediaEl.likes);
+            containerMedias.innerHTML += `
+            <li class="medias">
+                <video controls>
+                    <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="" type="video/mp4">
+                </video>
+
+                <div class="infoMedias">
+                    <p>${mediaEl.title}</p>
+                    <p>${mediaEl.likes} \u2764</p>
+                </div>
+                
+            </li>`
+        }
+        
+    
     })
-    console.log(arraysMedias.includes(82))
-    let uniqueArrayMediasPhotographerId = [...new Set (arraysMedias)]  
-    console.log(uniqueArrayMediasPhotographerId)
+    countLikes = likes.reduce((a, b)=> a + b,0);
+    price.innerHTML+=`
+    <p>${countLikes} \u2764</p>
+    `
 };
-getPhotographer("sport");
-getMedias();
+getPhotographer(nbId);
+getMedias(nbId);

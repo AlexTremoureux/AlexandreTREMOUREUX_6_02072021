@@ -1,4 +1,7 @@
 @import "./variables.scss";
+body{
+    font-family : 'DM Sans', sans-serif ;
+}
 header {
     height: 100px;
     margin-left: 20px;
@@ -10,7 +13,6 @@ header {
 .infoPhotograph {
     display: flex;
     margin: auto;
-    //justify-content: space-around;
 }
 .info {
     display: flex;
@@ -20,9 +22,9 @@ header {
     margin-left: 20px;
 }
 .contact {
-    width: 120px;
-    height: 40px;
-    font-size: 1rem;
+    width: 170px;
+    height: 69px;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +45,49 @@ h1 {
     color: $color-primary-font;
     margin: 0px;
 }
-h2 {
-    text-align: left;
+.filter {
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
-a {
+#btnFilter {
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#btnFilter a {
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    align-items: center;
     text-decoration: none;
-    color: $color-primary-font;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: $color-secondary-4-font;
+    width: 170px;
+    height: 59px;
+    border-bottom: solid white 1px;
+    border-radius: 10px;
+}
+.deroulant:hover {
+    position: relative;
+    .sous{
+        display: block;
+    }  
+}
+.sous {
+    display: none;
+    position: absolute;
+    top: 44px;
+}
+.info a {
+    text-decoration: none;
+    color: $color-secondary-4-font;
+    height: 24px;
+    margin: 5px;
+    padding: 5px;
+    border: solid 0.1px rgb(190, 190, 190) ;
+    border-radius: 20px;
 }
 li {
     list-style: none;
@@ -70,19 +109,45 @@ ul {
 #tagline {
     font-weight: bold;
 }
-img {
-    width: 300px;
+
+.medias img ,video {
+    width: 350px;
     height: 300px;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+.infoMedias{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    font-weight: bold;
+    color: $color-secondary-4-font;
+    
+}
+.infoMedias p{
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+#containerMedias{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+figcaption{
+    display: flex;
+    justify-content: space-between;
 }
 #price {
-    position: absolute;
+    position: sticky;
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     align-items: center;
     bottom: 0px;
-    right: 10px;
-    width: 20%;
-    height: 50px;
+    border-radius: 5px;
+    float: right;
+    width: 376px;
+    height: 69px;
     background-color: $color-primary-font;
     color: white;
 }
