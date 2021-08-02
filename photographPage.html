@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>@import url('https://fonts.googleapis.com/css2? family= DM+Sans & display=swap'); </style>
+    <script src="https://kit.fontawesome.com/2c09dcf76b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./sass/photographePage.css">
+    <link rel="stylesheet" href="./sass/lightbox.css">
+    <link rel="stylesheet" href="./sass/formular.css">
     <title id="title">FishEye,</title>
 </head>
 <body>
@@ -19,6 +22,44 @@
         </div>
         <div id="price">
         </div>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modalTop">
+                    <h1 class="modalText modalName">Contactez moi</h1>
+                    <span class="close">&times;</span>
+                </div>
+                <h2 class="modalText" id="modalText"></h2>
+                <form action="https://cible.php" method="post">
+                    <label for='firstName'>Prénom : </label>
+                    <input type='text' name='firstName' id='firstName' maxlength='30' required>
+                    <span class='miss'></span>
+                    <label for='lastName'>Nom : </label>
+                    <input type='text' name='lastName' id='lastName' maxlength='30' required>
+                    <span class='miss'></span>
+                    <label for='mail'>Email : </label>
+                    <input type='email' name='mail' id='mail' required>
+                    <span class='miss'></span>
+                    <label for='message'>Votre message :</label>
+                    <input type='textarea' name='message' id='message' maxlength='200' required>
+                    <span class='miss'></span>
+                    <input type='submit' value='Envoyer' id='btnValidate'>
+                </form>
+            </div>
+          
+        </div>
+        <!--
+            <div class="lightbox">
+            <button class="lightbox__close"></button>
+            <button class="lightbox__next"></button>
+            <button class="lightbox__prev"></button>
+            <div class="lightbox__container">
+                <img src="${url}" alt="">
+                <div class="lightbox__loader"></div>
+            </div>`
+        </div>
+        -->
+        
     </main>
     <script type ="module" src="./scripts/photographPage.js"></script>
 </body>

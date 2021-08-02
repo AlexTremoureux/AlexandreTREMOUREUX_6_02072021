@@ -21,7 +21,7 @@ header {
     text-align: left;
     margin-left: 20px;
 }
-.contact {
+.contact , #btnValidate {
     width: 170px;
     height: 69px;
     font-size: 1.4rem;
@@ -31,6 +31,7 @@ header {
     border-radius: 5px;
     background-color: $color-secondary-4-font;
     color: white;
+    cursor: pointer;
 }
 #portrait {
     width: 200px;
@@ -118,16 +119,23 @@ ul {
 }
 .infoMedias{
     display: flex;
+    justify-content: center;
+    align-self: center;
     height: 50px;
     justify-content: space-between;
     font-weight: bold;
     color: $color-secondary-4-font;
     
 }
-.infoMedias p{
-    margin-top: 5px;
+.likeSection {
+    display: flex;
+}
+.iconLike {
+    border: none;
+    color: $color-secondary-4-font;
     font-size: 1.2rem;
 }
+
 #containerMedias{
     display: flex;
     justify-content: space-evenly;
@@ -151,3 +159,9 @@ figcaption{
     background-color: $color-primary-font;
     color: white;
 }
+i {
+    margin-left: 10px;
+}
+
+
+ 

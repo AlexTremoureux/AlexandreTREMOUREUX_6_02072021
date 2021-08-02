@@ -37,7 +37,7 @@ header {
   margin-left: 20px;
 }
 
-.contact {
+.contact, #btnValidate {
   width: 170px;
   height: 69px;
   font-size: 1.4rem;
@@ -53,6 +53,7 @@ header {
   border-radius: 5px;
   background-color: #901C1C;
   color: white;
+  cursor: pointer;
 }
 
 #portrait {
@@ -176,6 +177,11 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   height: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -184,8 +190,15 @@ ul {
   color: #901C1C;
 }
 
-.infoMedias p {
-  margin-top: 5px;
+.likeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.iconLike {
+  border: none;
+  color: #901C1C;
   font-size: 1.2rem;
 }
 
@@ -231,5 +244,9 @@ figcaption {
   height: 69px;
   background-color: #D3573C;
   color: white;
+}
+
+i {
+  margin-left: 10px;
 }
 /*# sourceMappingURL=photographePage.css.map */

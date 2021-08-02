@@ -1,0 +1,85 @@
+/*Variables*/
+.modal {
+  display: none;
+  position: fixed;
+  background-color: #D3573C;
+  z-index: 1;
+  top: 20px;
+  left: 30%;
+  height: 80%;
+  width: 40%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+
+.modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modalTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalText {
+  color: black;
+}
+
+.modalName {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+input {
+  height: 40px;
+}
+
+#message {
+  height: 100px;
+}
+
+.miss {
+  color: black;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.close {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+#btnValidate {
+  margin-top: 50px;
+}
+/*# sourceMappingURL=formular.css.map */
