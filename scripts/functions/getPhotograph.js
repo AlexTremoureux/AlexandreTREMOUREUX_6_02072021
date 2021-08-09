@@ -1,8 +1,8 @@
-import { container , prod, dev, env} from "../constantes.js";
+import { container , ENV} from "../constantes.js";
 
 //Fonction getPhotograph venant fetch les données et remplir les articles
 export const getPhotograph = async function () {
-    let response = await fetch(dev)
+    let response = await fetch(ENV)
     let data = await response.json()
     .catch(function (error) {
       alert(error="erreur")

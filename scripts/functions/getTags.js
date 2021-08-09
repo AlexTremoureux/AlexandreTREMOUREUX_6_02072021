@@ -1,9 +1,9 @@
-import { container , prod, dev, env} from "../constantes.js";
+import { ENV } from "../constantes.js";
 import { getPhotographFilter } from "./getPhotographFilter.js";
 
 //Fonction getTags venant fetch les données pour afficher la liste de filtres de navigation
 export const getTags = async function () {
-    let response = await fetch(dev)
+    let response = await fetch(ENV)
     let data = await response.json()
     .catch(function (error) {
       alert(error="erreur")
@@ -26,7 +26,6 @@ export const getTags = async function () {
     //Ajout du listener avec appel à la fonction getPhotographFilter(filterName)
     let filterName ="";
     const nodeFilter = document.querySelectorAll(".navFilter");
-    console.log(nodeFilter)
     nodeFilter.forEach(filter => {
       filter.addEventListener("click", e => {
         e.preventDefault();

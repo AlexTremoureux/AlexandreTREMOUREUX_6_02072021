@@ -85,4 +85,3 @@ export class Lightbox {
         return dom
     }
 }
-//_______________________________LightBox Fin____________________________

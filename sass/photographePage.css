@@ -93,9 +93,9 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -108,7 +108,16 @@ h1 {
   width: 170px;
   height: 59px;
   border-bottom: solid white 1px;
-  border-radius: 10px;
+}
+
+#popular {
+  border-radius: 5px;
+}
+
+#iconMenu {
+  background: url(../Images/arrow.svg) no-repeat;
+  width: 40px;
+  height: 20%;
 }
 
 .deroulant:hover {
@@ -117,6 +126,31 @@ h1 {
 
 .deroulant:hover .sous {
   display: block;
+}
+
+.deroulant:hover #titre {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.deroulant:hover #popular {
+  border-radius: 5px 5px  0px 0px;
+}
+
+.deroulant:hover #iconMenu {
+  background: url(../Images/arrow_black.svg) no-repeat;
+  -webkit-transform: rotate(180deg) translate(25px);
+          transform: rotate(180deg) translate(25px);
+}
+
+#iconMenu:hover {
+  background: url(../Images/arrow_black.svg) no-repeat;
+  -webkit-transform: rotate(180deg) translate(25px);
+          transform: rotate(180deg) translate(25px);
+}
+
+#btnFilter a:hover {
+  color: black;
+  background-color: #D3573C;
 }
 
 .sous {
@@ -149,12 +183,6 @@ ul {
   padding-left: 0px;
 }
 
-#container {
-  width: 95%;
-  margin: auto;
-  text-align: center;
-}
-
 #localisation, #tags, #nav {
   font-weight: bold;
   color: #901C1C;
@@ -162,6 +190,12 @@ ul {
 
 #tagline {
   font-weight: bold;
+}
+
+#container {
+  width: 95%;
+  margin: auto;
+  text-align: center;
 }
 
 .medias img, video {
@@ -229,9 +263,9 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

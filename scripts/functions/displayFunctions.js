@@ -1,3 +1,4 @@
+import { priceInfo, title, modalText } from "../constantes.js";
 //Affichage des tags correspondant au photographe
 export const tagsDisplay = (tags,id) => {
     let tagList = document.getElementById("tagList"+id);
@@ -6,14 +7,13 @@ export const tagsDisplay = (tags,id) => {
     `<li id="tags"><a>#${tagsElement}</a></li>`
     });
 }
-
 //Affichage du prix journalier
 export const priceDisplay = (photographerPrice) => {
-    price.innerHTML+=`<p>${photographerPrice}€ / jour</p>`
+    priceInfo.innerHTML+=`<p>${photographerPrice}€ / jour</p>`
 }
 //Affichage du formulaire
 export const formDisplay = (name) => {
-    modalText.innerHTML+=`${name}`
+        modalText.innerHTML+=`${name}`
 };
 //Affichage du nom du photographe dans le titre de la fenêtre 
 export const titleDisplay = (name) => {
