@@ -19,7 +19,7 @@ export const getPhotographer = (source , filterId) => {
                     </ul>
                 </div>
                 <btn id="btnContact" class="contact">Contactez-moi</btn>
-                <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="">
+                <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="Photo de ${photograph.name}">
             </section>
             <section class="medias">
                 <div class="filter">
@@ -73,7 +73,7 @@ export const getMedias = (source,name) => {
         if (mediaEl.video) {
             containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${name}/${mediaEl.video}">
+                <a href="./Photos/Medias/Sample Photos/${name}/${mediaEl.video}" alt="" type="video/mp4">
                 <video controls>
                     <source src="./Photos/Medias/Sample Photos/${name}/${mediaEl.video}" alt="" type="video/mp4">
                 </video>

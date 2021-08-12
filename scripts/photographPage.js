@@ -14,7 +14,7 @@ const fetcher = ( async function () {
     let response = await fetch(ENV)
     let data = await response.json()
     .catch(function (error) {
-    alert(error)
+    console.log(error)
     })
     //------------------------Recherche des medias et du prénom en fonction de l'ID dans le window location------------------------------------------
     functionSearchMediaById(data.media,nbId)
