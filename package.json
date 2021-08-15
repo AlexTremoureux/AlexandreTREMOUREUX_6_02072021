@@ -1,0 +1,32 @@
+{
+  "name": "alexandretremoureux_6_02072021",
+  "version": "1.0.0",
+  "description": "Projet 6 FishEye",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexTremoureux/AlexandreTREMOUREUX_6_02072021.git"
+  },
+  "keywords": [
+    "wTz8JGhCVFkadA"
+  ],
+  "author": "Alexandre TREMOUREUX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexTremoureux/AlexandreTREMOUREUX_6_02072021/issues"
+  },
+  "homepage": "https://github.com/AlexTremoureux/AlexandreTREMOUREUX_6_02072021#readme"
+}

@@ -1,18 +1,20 @@
-import { container , ENV} from "../constantes.js";
+import { container, ENV } from '../constantes.js';
 
-//Fonction getPhotographFilter venant fetch les données et remplir les articles filtrés par tags
-export const getPhotographFilter = async function (filter) {
-    let response = await fetch(ENV)
-    let data = await response.json()
-    .catch(function (error) {
-      alert(error)
-    })
-    container.innerHTML = " ";
-    //Boucle sur chaque photographe filtré afin de lui créer son propre article
-    data.photographers.forEach(photograph => {
-      if (photograph.tags.includes(filter)) {
-        container.innerHTML += 
-        `<article id="photograph${photograph.id}">
+// Fonction getPhotographFilter venant fetch les données et remplir les articles filtrés par tags
+// eslint-disable-next-line import/prefer-default-export
+export const getPhotographFilter = async function getPhotographFilter(filter) {
+  const response = await fetch(ENV);
+  const data = await response.json()
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    });
+  container.innerHTML = ' ';
+  // Boucle sur chaque photographe filtré afin de lui créer son propre article
+  data.photographers.forEach((photograph) => {
+    if (photograph.tags.includes(filter)) {
+      container.innerHTML
+        += `<article id="photograph${photograph.id}">
           <section class="headerSection">
             <a href="./photographPage.html?id-${photograph.id}">
               <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="">
@@ -29,12 +31,12 @@ export const getPhotographFilter = async function (filter) {
             </ul>
           </section>
         </article>`;
-        //Boucle forEach afin d'afficher les différents tags de chaque photographe
-        let tagList = document.getElementById("tagList"+photograph.id);
-        photograph.tags.forEach(tagsElement => {
-          tagList.innerHTML += 
-          `<li id="tags"><a>#${tagsElement}</a></li>`
-        });
-      }
-    });
-  };
+      // Boucle forEach afin d'afficher les différents tags de chaque photographe
+      const tagList = document.getElementById(`tagList${photograph.id}`);
+      photograph.tags.forEach((tagsElement) => {
+        tagList.innerHTML
+          += `<li id="tags"><a>#${tagsElement}</a></li>`;
+      });
+    }
+  });
+};

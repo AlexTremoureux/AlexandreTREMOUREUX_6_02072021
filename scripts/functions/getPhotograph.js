@@ -1,16 +1,18 @@
-import { container , ENV} from "../constantes.js";
+import { container, ENV } from '../constantes.js';
 
-//Fonction getPhotograph venant fetch les données et remplir les articles
-export const getPhotograph = async function () {
-    let response = await fetch(ENV)
-    let data = await response.json()
-    .catch(function (error) {
-      alert(error="erreur")
-    })
-    //Boucle sur chaque photographe afin de lui créer son propre article
-    data.photographers.forEach(photograph => {
-      container.innerHTML += 
-      `<article id="photograph${photograph.id}">
+// Fonction getPhotograph venant fetch les données et remplir les articles
+// eslint-disable-next-line import/prefer-default-export
+export const getPhotograph = async function getPhotograph() {
+  const response = await fetch(ENV);
+  const data = await response.json()
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    });
+    // Boucle sur chaque photographe afin de lui créer son propre article
+  data.photographers.forEach((photograph) => {
+    container.innerHTML
+      += `<article id="photograph${photograph.id}">
         <section class="headerSection">
           <a href="./photographPage.html?id-${photograph.id}">
             <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="">
@@ -27,12 +29,12 @@ export const getPhotograph = async function () {
           </ul>
         </section>
       </article>`;
-      
-      //Boucle forEach afin d'afficher les différents tags de chaque photographe
-      let tagList = document.getElementById("tagList"+photograph.id);
-      photograph.tags.forEach(tagsElement => {
-        tagList.innerHTML += 
-        `<li id="tags"><a>#${tagsElement}</a></li>`
-      });
+
+    // Boucle forEach afin d'afficher les différents tags de chaque photographe
+    const tagList = document.getElementById(`tagList${photograph.id}`);
+    photograph.tags.forEach((tagsElement) => {
+      tagList.innerHTML
+        += `<li id="tags"><a>#${tagsElement}</a></li>`;
     });
+  });
 };
