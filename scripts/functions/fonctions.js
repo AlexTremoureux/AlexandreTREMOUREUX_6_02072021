@@ -64,8 +64,8 @@ export const getMedias = (source) => {
     if (mediaEl.image) {
       containerMedias.innerHTML += `
             <li class="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}">
-                <img src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}" alt="">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}" alt="${mediaEl.alt}">
+                <img src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}" alt="${mediaEl.alt}">
                 </a>
                 <div class="infoMedias">
                     <p>${mediaEl.title}</p> 
@@ -81,9 +81,9 @@ export const getMedias = (source) => {
     if (mediaEl.video) {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="" type="video/mp4">
-                <video controls>
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="" type="video/mp4">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
+                <video controls alt="${mediaEl.alt}" type="video/mp4">
+                    <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
                 </video>
                 </a>
                 <div class="infoMedias">
@@ -126,8 +126,8 @@ export const mediasFilterByTitle = () => {
       if (element.title === titre && element.image) {
         containerMedias.innerHTML += `
             <li class="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}">
-                <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
+                <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
                 </a>
                 <div class="infoMedias">
                     <p>${element.title}</p> 
@@ -143,9 +143,9 @@ export const mediasFilterByTitle = () => {
       if (element.title === titre && element.video) {
         containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}">
-                <video controls>
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="" type="video/mp4">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
+                <video controls alt="${element.alt}" type="video/mp4">
+                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
                 </video>
                 </a>
                 <div class="infoMedias">
@@ -174,8 +174,8 @@ export const mediasFilterByDate = () => {
       if (element.date === date && element.image) {
         containerMedias.innerHTML += `
             <li class="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}">
-                <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
+                <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="alt="${element.alt}">
                 </a>
                 <div class="infoMedias">
                     <p>${element.title}</p> 
@@ -191,9 +191,9 @@ export const mediasFilterByDate = () => {
       if (element.date === date && element.video) {
         containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
                 <video controls>
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="" type="video/mp4">
+                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
                 </video>
                 </a>
                 <div class="infoMedias">
@@ -221,8 +221,8 @@ export const mediasFilterByLikes = () => {
     if (element.image) {
       containerMedias.innerHTML += `
         <li class="medias">
-            <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}">
-            <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="">
+            <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
+            <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
             </a>
             <div class="infoMedias">
                 <p>${element.title}</p> 
@@ -238,9 +238,9 @@ export const mediasFilterByLikes = () => {
     if (element.video) {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
                 <video controls>
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="" type="video/mp4">
+                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
                 </video>
                 </a>
                 <div class="infoMedias">

@@ -68,6 +68,7 @@
         "title": "Fashion Yellow Beach",
         "image": "Fashion_Yellow_Beach.jpg",
         "tags": ["fashion"],
+        "alt": "Femme vétue d'une tenue jaune avec la mer à l'horizon",
         "likes": 62,
         "date": "2011-12-08",
         "price": 55
@@ -78,6 +79,7 @@
         "title": "Fashion Urban Jungle",
         "image": "Fashion_Urban_Jungle.jpg",
         "tags": ["fashion"],
+        "alt": "Femme posant au milieu d'un pont dans une tenue évoquant la jungle",
         "likes": 11,
         "date": "2011-11-06",
         "price": 55
@@ -88,6 +90,7 @@
         "title": "Fashion Pattern on a Pattern",
         "image": "Fashion_Pattern_on_Pattern.jpg",
         "tags": ["fashion"],
+        "alt": "Femme vétue d'une tenue à rayure contrastant avec un mur de losange en arrière plan",
         "likes": 72,
         "date": "2013-08-12",
         "price": 55
@@ -98,6 +101,7 @@
         "title": "Wedding Gazebo",
         "image": "Event-_WeddingGazebo.jpg",
         "tags": ["events"],
+        "alt": "Lieu prêt à acceuillir une cérémonie de mariage",
         "likes": 69,
         "date": "2018-02-22",
         "price": 55
@@ -108,6 +112,7 @@
         "title": "Sparkles",
         "image": "Event_Sparklers.jpg",
         "tags": ["events"],
+        "alt": "Fête se déroulant en pleine nuit avec chaque personne tenant un baton illuminé",
         "likes": 2,
         "date": "2020-05-25",
         "price": 55
@@ -118,6 +123,7 @@
         "title": "18th Anniversary",
         "image": "Event_18thAnniversary.jpg",
         "tags": ["events"],
+        "alt": "Organisation d'une fête pour un 18ème anniversaire",
         "likes": 33,
         "date": "2019-06-12",
         "price": 55
@@ -128,6 +134,7 @@
         "title": "Wooden Horse Sculpture",
         "video": "Art_Wooden_Horse_Sculpture.mp4",
         "tags": ["art"],
+        "alt": "Vidéo d'une sculpture de cheval en bois",
         "likes": 24,
         "date": "2011-12-08",
         "price": 100
@@ -138,6 +145,7 @@
         "title": "Triangle Man",
         "image": "Art_Triangle_Man.jpg",
         "tags": ["art"],
+        "alt": "Peinture artistique d'un homme avec un triangle blanc au premier plan",
         "likes": 88,
         "date": "2007-05-07",
         "price": 55
@@ -148,6 +156,7 @@
         "title": "Purple Tunnel",
         "image": "Art_Purple_light.jpg",
         "tags": ["art"],
+        "alt": "Graffitis dans un couloir de métro avec un éclairage violet",
         "likes": 24,
         "date": "2018-05-05",
         "price": 55
@@ -158,6 +167,7 @@
         "title": "Art Mine",
         "image": "Art_Mine.jpg",
         "tags": ["art"],
+        "alt": "Graffitis d'oiseaux bleus et rouges s'entrecroisants",
         "likes": 75,
         "date": "2019-11-25",
         "price": 55
@@ -169,6 +179,7 @@
         "title": "8 Rows",
         "image": "Sport_2000_with_8.jpg",
         "tags": ["sport"],
+        "alt": "Rameurs en pleine course",
         "likes": 52,
         "date": "2013-02-30",
         "price": 70
@@ -179,6 +190,7 @@
         "title": "Fashion Wings",
         "image": "Fashion_Wings.jpg",
         "tags": ["fashion"],
+        "alt": "Pose artistique d'un homme et d'une femme en tenue de mode",
         "likes": 58,
         "date": "2018-07-17",
         "price": 70
@@ -189,6 +201,7 @@
         "title": "Melody Red on Stripes",
         "image": "Fashion_Melody_Red_on_Stripes.jpg",
         "tags": ["fashion"],
+        "alt": "Femme descendant des escaliers dans une robe rouge",
         "likes": 11,
         "date": "2019-08-12",
         "price": 70
@@ -199,6 +212,7 @@
         "title": "Venture Conference",
         "image": "Event_VentureConference.jpg",
         "tags": ["events"],
+        "alt": "Réunion de travail",
         "likes": 2,
         "date": "2019-01-02",
         "price": 70
@@ -209,6 +223,7 @@
         "title": "Product Pitch",
         "image": "Event_ProductPitch.jpg",
         "tags": ["events"],
+        "alt": "Présentation d'un produit",
         "likes": 3,
         "date": "2019-05-20",
         "price": 70
@@ -219,6 +234,7 @@
         "title": "Musical Festival Keyboard",
         "image": "Event_KeyboardCheck.jpg",
         "tags": ["events"],
+        "alt": "Musicienne en train de jouer au synthé",
         "likes": 52,
         "date": "2019-07-18",
         "price": 70
@@ -229,6 +245,7 @@
         "title": "Musical Festival Singer",
         "image": "Event_Emcee.jpg",
         "tags": ["events"],
+        "alt": "Chanteuse en plein concert",
         "likes": 23,
         "date": "2018-02-22",
         "price": 70
@@ -239,6 +256,7 @@
         "title": "Animal Majesty",
         "image": "Animals_Majesty.jpg",
         "tags": ["animals"],
+        "alt": "Cerf prenant la pose devant l'objectif",
         "likes": 52,
         "date": "2017-03-13",
         "price": 70
@@ -249,6 +267,7 @@
         "title": "Cute Puppy on Sunset",
         "video": "Animals_Puppiness.mp4",
         "tags": ["animals"],
+        "alt": "Vidéo d'un chiot tenue en laisse s'amusant dans le sable",
         "likes": 52,
         "date": "2016-06-12",
         "price": 70
@@ -260,6 +279,7 @@
         "title": "Rock Mountains",
         "video": "Travel_Rock_Mountains.mp4",
         "tags": ["travel"],
+        "alt": "Vidéo du sommet d'un bloc rocheux",
         "likes": 23,
         "date": "2017-03-18",
         "price": 45
@@ -270,6 +290,7 @@
         "title": "Outdoor Baths",
         "image": "Travel_Outdoor_Baths.jpg",
         "tags": ["travel"],
+        "alt": "Gens se baignants dans des sources d'eau chaude",
         "likes": 101,
         "date": "2017-04-03",
         "price": 45
@@ -280,6 +301,7 @@
         "title": "Road into the Hill",
         "image": "Travel_Road_into_Hill.jpg",
         "tags": ["travel"],
+        "alt": "Une route en lacets parmis les collines",
         "likes": 99,
         "date": "2018-04-30",
         "price": 45
@@ -290,6 +312,7 @@
         "title": "Bridge into the Forest",
         "image": "Travel_Bridge_into_Forest.jpg",
         "tags": ["travel"],
+        "alt": "Un pont étroit en plein coeur de la forêt",
         "likes": 34,
         "date": "2016-04-05",
         "price": 45
@@ -300,6 +323,7 @@
         "title": "Boat Wonderer",
         "image": "Travel_Boat_Wanderer.jpg",
         "tags": ["travel"],
+        "alt": "Un bateau en plein milieu d'un lac entouré de montagnes et d'arbres",
         "likes": 23,
         "date": "2017-03-18",
         "price": 45
@@ -310,6 +334,7 @@
         "title": "Portrait Sunkiss",
         "image": "Portrait_Sunkissed.jpg",
         "tags": ["portrait"],
+        "alt": "Portrait d'une femme souriante",
         "likes": 66,
         "date": "2018-05-24",
         "price": 45
@@ -320,6 +345,7 @@
         "title": "Shaw Potrait",
         "image": "Portrait_Shaw.jpg",
         "tags": ["portait"],
+        "alt": "Portrait d'un homme dans la pénombre",
         "likes": 52,
         "date": "2017-04-21",
         "price": 45
@@ -330,6 +356,7 @@
         "title": "Alexandra",
         "image": "Portrait_Alexandra.jpg",
         "tags": ["portait"],
+        "alt": "Portrait en noir et blanc d'une femme",
         "likes": 95,
         "date": "2018-11-02",
         "price": 45
@@ -340,6 +367,7 @@
         "title": "Afternoon Break",
         "image": "Portrait_AfternoonBreak.jpg",
         "tags": ["portait"],
+        "alt": "Portrait d'un homme en pause cigarette",
         "likes": 25,
         "date": "2019-01-02",
         "price": 45
@@ -351,6 +379,7 @@
         "title": "Lonesome",
         "image": "Travel_Lonesome.jpg",
         "tags": ["travel"],
+        "alt": "Une personne seule en plein milieu de la nature",
         "likes": 88,
         "date": "2019-02-03",
         "price": 45
@@ -361,6 +390,7 @@
         "title": "Hillside Color",
         "image": "Travel_HillsideColor.jpg",
         "tags": ["travel"],
+        "alt": "Village côtier aux maisons très colorées",
         "likes": 85,
         "date": "2019-04-03",
         "price": 45
@@ -371,6 +401,7 @@
         "title": "Wednesday Potrait",
         "image": "Portrait_Wednesday.jpg",
         "tags": ["portait"],
+        "alt": "Portrait d'une enfant faisant une grimace",
         "likes": 34,
         "date": "2019-04-07",
         "price": 45
@@ -381,6 +412,7 @@
         "title": "Nora Portrait",
         "image": "Portrait_Nora.jpg",
         "tags": ["portait"],
+        "alt": "Portrait d'une femme accoudée à une banquette de restaurant",
         "likes": 63,
         "date": "2019-04-07",
         "price": 45
@@ -391,6 +423,7 @@
         "title": "Raw Black Portrait",
         "image": "Portrait_Background.jpg",
         "tags": ["portait"],
+        "alt": "Portrait d'une femme en noir et blanc dans la pénombre",
         "likes": 55,
         "date": "2019-06-20",
         "price": 45
@@ -401,6 +434,7 @@
         "title": "Seaside Wedding",
         "image": "Event_SeasideWedding.jpg",
         "tags": ["events"],
+        "alt": "Grande table prête à recevoir les invités pour un repas de mariage",
         "likes": 25,
         "date": "2019-06-21",
         "price": 45
@@ -411,6 +445,7 @@
         "title": "Boulder Wedding",
         "image": "Event_PintoWedding.jpg",
         "tags": ["events"],
+        "alt": "Jeunes mariés s'enlaçants",
         "likes": 52,
         "date": "2019-06-25",
         "price": 45
@@ -421,6 +456,7 @@
         "title": "Benevides Wedding",
         "image": "Event_BenevidesWedding.jpg",
         "tags": ["events"],
+        "alt": "Jeunes mariés s'enlaçants",
         "likes": 77,
         "date": "2019-06-28",
         "price": 45
@@ -431,6 +467,7 @@
         "title": "Wild Horses in the Mountains",
         "video": "Animals_Wild_Horses_in_the_mountains.mp4",
         "tags": ["animals"],
+        "alt": "Vidéo d'un troupeau de chevaux au trot avec des montagnes en arrière plan",
         "likes": 142,
         "date": "2019-08-23",
         "price": 60
@@ -441,6 +478,7 @@
         "title": "Rainbow Bird",
         "image": "Animals_Rainbow.jpg",
         "tags": ["animals"],
+        "alt": "Oiseau multicolore perché sur sa branche",
         "likes": 59,
         "date": "2019-07-02",
         "price": 60
@@ -452,6 +490,7 @@
         "title": "Japanese Tower, Kyoto",
         "image": "Travel_Tower.jpg",
         "tags": ["travel"],
+        "alt": "Rue de kyoto avec une tour en arrière plan",
         "likes": 25,
         "date": "2019-04-03",
         "price": 60
@@ -462,6 +501,7 @@
         "title": "Senset on Canals, Venice",
         "image": "Travel_SunsetonCanals.jpg",
         "tags": ["travel"],
+        "alt": "Canal de venise",
         "likes": 53,
         "date": "2019-05-06",
         "price": 60
@@ -472,6 +512,7 @@
         "title": "Mountain and Lake",
         "image": "Travel_OpenMountain.jpg",
         "tags": ["travel"],
+        "alt": "Photo d'un lac entouré de montagnes et d'arbres",
         "likes": 33,
         "date": "2019-05-12",
         "price": 60
@@ -482,6 +523,7 @@
         "title": "City Bike and Stair, Paris",
         "image": "Travel_Bike_and_Stair.jpg",
         "tags": ["travel"],
+        "alt": "Vélo stationné le long d'un escalier Parisien",
         "likes": 53,
         "date": "2019-06-20",
         "price": 60
@@ -492,6 +534,7 @@
         "title": "Adventure Door, India",
         "image": "Travel_Adventure_Door.jpg",
         "tags": ["travel"],
+        "alt": "Magnifique porte ornementée en Inde",
         "likes": 63,
         "date": "2019-06-26",
         "price": 60
@@ -502,6 +545,7 @@
         "title": "Contrast, St Petersburg",
         "image": "Architecture_Contrast.jpg",
         "tags": ["architecture"],
+        "alt": "Les toits de St Petersbourg",
         "likes": 52,
         "date": "2019-06-30",
         "price": 60
@@ -512,6 +556,7 @@
         "title": "On a Hill, Tibet",
         "image": "Architecture_On_a_hill.jpg",
         "tags": ["architecture"],
+        "alt": "Village tibétain surplombant une vallée",
         "likes": 63,
         "date": "2019-07-20",
         "price": 60
@@ -522,6 +567,7 @@
         "title": "Leaning Tower, Pisa",
         "image": "Architecture_Dome.jpg",
         "tags": ["architecture"],
+        "alt": "La tour de Pise",
         "likes": 88,
         "date": "2020-01-05",
         "price": 60
@@ -532,6 +578,7 @@
         "title": "Circle Highways, Buenos Aires",
         "video": "Architecture_coverr_circle_empty_highway_in_buenos_aires_587740985637.mp4",
         "tags": ["architecture"],
+        "alt": "Vidéo des grands axes de circulation à Buenos Aires",
         "likes": 57,
         "date": "2020-01-20",
         "price": 65
@@ -542,6 +589,7 @@
         "title": "Corner Building and Blue Sky",
         "image": "Architecture_Corner_Room.jpg",
         "tags": ["architecture"],
+        "alt": "Immeuble à la facade atypique",
         "likes": 54,
         "date": "2020-05-05",
         "price": 60
@@ -553,6 +601,7 @@
         "title": "Tricks in the Air",
         "video": "Sport_Tricks_in_the_air.mp4",
         "tags": ["sport"],
+        "alt": "Vidéo d'une danseuse suspendue à une corde",
         "likes": 150,
         "date": "2018-02-30",
         "price": 70
@@ -563,6 +612,7 @@
         "title": "Climber",
         "image": "Sport_Next_Hold.jpg",
         "tags": ["sport"],
+        "alt": "Femme escaladant une paroie rocheuse",
         "likes": 101,
         "date": "2018-03-05",
         "price": 65
@@ -573,6 +623,7 @@
         "title": "Surfer",
         "image": "sport_water_tunnel.jpg",
         "tags": ["sport"],
+        "alt": "Surfeur en plein milieu d'un tube",
         "likes": 103,
         "date": "2018-03-10",
         "price": 70
@@ -583,6 +634,7 @@
         "title": "Skier",
         "image": "Sport_Sky_Cross.jpg",
         "tags": ["sport"],
+        "alt": "Skieur en plein saut",
         "likes": 77,
         "date": "2018-04-16",
         "price": 50
@@ -593,6 +645,7 @@
         "title": "Race End",
         "image": "Sport_Race_End.jpg",
         "tags": ["sport"],
+        "alt": "Femmes en pleine course",
         "likes": 88,
         "date": "2018-04-22",
         "price": 65
@@ -603,6 +656,7 @@
         "title": "Jump!",
         "image": "Sport_Jump.jpg",
         "tags": ["sport"],
+        "alt": "SkateBoarders ridant dans un bowl",
         "likes": 95,
         "date": "2018-04-27",
         "price": 70
@@ -613,6 +667,7 @@
         "title": "White Light",
         "image": "Architecture_White_Light.jpg",
         "tags": ["architecture"],
+        "alt": "Immense verrière illuminée",
         "likes": 52,
         "date": "2018-05-03",
         "price": 75
@@ -623,6 +678,7 @@
         "title": "Water on Modern Building",
         "image": "Architecture_Water_on_Modern.jpg",
         "tags": ["architecture"],
+        "alt": "Immeuble à l'architecture rappelant une vague",
         "likes": 55,
         "date": "2018-05-10",
         "price": 72
@@ -633,6 +689,7 @@
         "title": "Horseshoe",
         "image": "Architecture_Horseshoe.jpg",
         "tags": ["architecture"],
+        "alt": "Immeuble ressemblant à un fer à cheval",
         "likes": 85,
         "date": "2018-05-15",
         "price": 71
@@ -643,6 +700,7 @@
         "title": "Cross Bar",
         "image": "Architecture_Cross_Bar.jpg",
         "tags": ["architecture"],
+        "alt": "Immeubles laissant apparaitre une croix",
         "likes": 66,
         "date": "2018-05-20",
         "price": 58
@@ -653,6 +711,7 @@
         "title": "Connected Curves",
         "image": "Architecture_Connected_Curves.jpg",
         "tags": ["architecture"],
+        "alt": "Immeubles avec de jolies formes arrondies",
         "likes": 79,
         "date": "2018-05-21",
         "price": 80
