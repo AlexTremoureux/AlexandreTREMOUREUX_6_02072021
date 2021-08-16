@@ -14,34 +14,35 @@ export const getPhotographer = (source, filterId) => {
   source.forEach((photograph) => {
     if (photograph.id === filterId) {
       container.innerHTML
-            += `<article id="photograph${photograph.id}">
-            <section class="infoPhotograph">
-                <div class="info">
-                    <h1 id="name">${photograph.name}</h1>
-                    <p id="localisation">${photograph.city}, ${photograph.country}</p>
-                    <p id="tagline">${photograph.tagline}</p>
-                    <ul id="tagList${photograph.id}">
-                    </ul>
-                </div>
-                <btn id="btnContact" class="contact">Contactez-moi</btn>
-                <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="Photo de ${photograph.name}">
-            </section>
-            <section class="medias">
-                <div class="filter">
-                <h2>Trier par</h2>
-                <nav id="btnFilter">
-                    <div class="deroulant">
-                        <a id="popular" href="#"><p>popularité</p><p id="iconMenu"></p></a>
-                        <ul class="sous">
-                            <li><a id="date" href="#">date</a></li>
-                            <li><a id="titre" href="#">titre</a></li>
+            += `
+            <article id="photograph${photograph.id}">
+                <section class="infoPhotograph">
+                    <div class="info">
+                        <h1 id="name">${photograph.name}</h1>
+                        <p id="localisation">${photograph.city}, ${photograph.country}</p>
+                        <p id="tagline">${photograph.tagline}</p>
+                        <ul id="tagList${photograph.id}">
                         </ul>
                     </div>
-                </nav>
-                </div>
-                <ul id="containerMedias">
-                </ul>
-            </section>
+                    <button id="btnContact" alt="Contact Me" class="contact">Contactez-moi</button>
+                    <img id="portrait" src="./Photos/Medias/Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="${photograph.name}">
+                </section>
+                <section class="medias">
+                    <div class="filter">
+                    <h2>Trier par</h2>
+                    <nav id="btnFilter" alt="Order by" role=”button” aria-haspopup="lisbox" aria-expanded>
+                        <div class="deroulant">
+                            <a id="popular" href="#"><p>popularité</p><i id="iconMenu"></i></a>
+                            <ul class="sous" role="listbox", aria-activedescendant, aria-selected,  >
+                                <li><a id="date" href="#">date</a></li>
+                                <li><a id="titre" href="#">titre</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    </div>
+                    <ul id="containerMedias">
+                    </ul>
+                </section>
             </article>`;
       // Affichage du prix journalier
       priceDisplay(photograph.price);
@@ -71,7 +72,7 @@ export const getMedias = (source) => {
                     <p>${mediaEl.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount">${mediaEl.likes}</p>
-                        <button class="iconLike">
+                        <button class="iconLike" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -90,7 +91,7 @@ export const getMedias = (source) => {
                     <p>${mediaEl.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount">${mediaEl.likes}</p>
-                        <button class="iconLike">
+                        <button class="iconLike" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -133,7 +134,7 @@ export const mediasFilterByTitle = () => {
                     <p>${element.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount">${element.likes}</p>
-                        <button class="iconLike">
+                        <button class="iconLike" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -152,7 +153,7 @@ export const mediasFilterByTitle = () => {
                     <p>${element.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount likesCount${element.id}">${element.likes}</p>
-                        <button class="iconLike iconLike${element.id}">
+                        <button class="iconLike iconLike${element.id}" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -181,7 +182,7 @@ export const mediasFilterByDate = () => {
                     <p>${element.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount">${element.likes}</p>
-                        <button class="iconLike">
+                        <button class="iconLike" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -200,7 +201,7 @@ export const mediasFilterByDate = () => {
                     <p>${element.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount likesCount${element.id}">${element.likes}</p>
-                        <button class="iconLike iconLike${element.id}">
+                        <button class="iconLike iconLike${element.id}" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -228,7 +229,7 @@ export const mediasFilterByLikes = () => {
                 <p>${element.title}</p> 
                 <div class="likeSection">
                     <p class="likesCount">${element.likes}</p>
-                    <button class="iconLike">
+                    <button class="iconLike" aria-label="likes">
                         <i class="fas fa-heart"></i>
                     </button>
                 </div>
@@ -247,7 +248,7 @@ export const mediasFilterByLikes = () => {
                     <p>${element.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount likesCount${element.id}">${element.likes}</p>
-                        <button class="iconLike iconLike${element.id}">
+                        <button class="iconLike iconLike${element.id}" aria-label="likes">
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>

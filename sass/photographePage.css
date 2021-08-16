@@ -120,35 +120,35 @@ h1 {
   height: 20%;
 }
 
-.deroulant:hover {
+.deroulant:active, .deroulant:focus {
   position: relative;
 }
 
-.deroulant:hover .sous {
+.deroulant:active .sous, .deroulant:focus .sous {
   display: block;
 }
 
-.deroulant:hover #titre {
+.deroulant:active #titre, .deroulant:focus #titre {
   border-radius: 0px 0px 5px 5px;
 }
 
-.deroulant:hover #popular {
+.deroulant:active #popular, .deroulant:focus #popular {
   border-radius: 5px 5px  0px 0px;
 }
 
-.deroulant:hover #iconMenu {
+.deroulant:active #iconMenu, .deroulant:focus #iconMenu {
   background: url(../Images/arrow_black.svg) no-repeat;
   -webkit-transform: rotate(180deg) translate(25px);
           transform: rotate(180deg) translate(25px);
 }
 
-#iconMenu:hover {
+#iconMenu:active, #iconMenu:focus {
   background: url(../Images/arrow_black.svg) no-repeat;
   -webkit-transform: rotate(180deg) translate(25px);
           transform: rotate(180deg) translate(25px);
 }
 
-#btnFilter a:hover {
+#btnFilter a:active, #btnFilter a:focus {
   color: black;
   background-color: #D3573C;
 }

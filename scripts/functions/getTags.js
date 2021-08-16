@@ -22,7 +22,7 @@ export const getTags = async function getTags() {
   const uniqueArrayTags = [...new Set(tagsList)];
   uniqueArrayTags.forEach((tags) => {
     containerTags.innerHTML += `
-      <li><a class="navFilter" href="#">#${tags}</a></li>
+      <li><a class="navFilter" alt="tag" href="#">#${tags}</a></li>
       `;
   });
   // Ajout du listener avec appel à la fonction getPhotographFilter(filterName)
