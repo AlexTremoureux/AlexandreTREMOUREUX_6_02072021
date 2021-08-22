@@ -4,7 +4,7 @@ import { priceInfo, title, modalText } from '../constantes.js';
 export const tagsDisplay = (tags, id) => {
   const tagList = document.getElementById(`tagList${id}`);
   tags.forEach((tagsElement) => {
-    tagList.innerHTML += `<li id="tags"><a>#${tagsElement}</a></li>`;
+    tagList.innerHTML += `<li id="tags"><a class="tagsLinkElement" href="./index.html?tag-${tagsElement}">#${tagsElement}</a></li>`;
   });
 };
 

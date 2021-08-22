@@ -70,4 +70,14 @@ article {
 #tagline {
   font-weight: bold;
 }
+
+.tagsLinkElement {
+  text-decoration: none;
+  color: #901C1C;
+  height: 24px;
+  margin: 5px;
+  padding: 5px;
+  border: solid 0.1px #bebebe;
+  border-radius: 20px;
+}
 /*# sourceMappingURL=styles.css.map */

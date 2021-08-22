@@ -9,7 +9,7 @@ export const functionCountTotalLikes = () => {
     likes.push(Number(element.innerHTML));
   });
   countTotalLikes = likes.reduce((a, b) => a + b, 0);
-  likeInfo.innerHTML += `<p>${countTotalLikes} <i class="fas fa-heart"></i></p>`;
+  likeInfo.innerHTML += `<p>${countTotalLikes} <i class="fas fa-heart" aria-label='button-like'></i></p>`;
 };
 
 // Fonction servant à incrémenter le nombre de likes au clic
@@ -23,7 +23,7 @@ export const like = () => {
       cibleCount.innerHTML = `${count}`;
       countTotalLikes += 1;
       likeInfo.innerHTML = '';
-      likeInfo.innerHTML += `<p>${countTotalLikes} <i class="fas fa-heart"></i></p>`;
+      likeInfo.innerHTML += `<p>${countTotalLikes} <i class="fas fa-heart" aria-label='button-like'></i></p>`;
       element.removeEventListener('click', increment);
     };
     element.addEventListener('click', increment);

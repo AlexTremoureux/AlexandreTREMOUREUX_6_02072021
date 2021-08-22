@@ -54,8 +54,15 @@ h1 {
 }
 #btnFilter {
     margin: 0px 20px;
+    padding: 0px 10px;
     cursor: pointer;
-    
+    border-radius: 5px;
+    width: 170px;
+    height: 59px;
+    background-color: $color-secondary-4-font;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 #btnFilter a {
     display: flex;
@@ -63,52 +70,28 @@ h1 {
     padding-left: 20px;
     align-items: center;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background-color: $color-secondary-4-font;
-    width: 170px;
-    height: 59px;
+    
+    
+    
     border-bottom: solid white 1px;
 }
-#popular {
-    border-radius: 5px;
+#btnFilter option {
+    width: 170px;
+    height: 59px;
 }
+
 #iconMenu {
     background: url(../Images/arrow.svg) no-repeat;
     width: 40px;
     height: 20%;
 }
-.deroulant:active, .deroulant:focus {
-    position: relative;
-    .sous{
-        display: block;
-    }
-    #titre {
-        border-radius: 0px 0px 5px 5px ;
-    }
-    #popular {
-        border-radius: 5px 5px  0px 0px;
-    } 
-    #iconMenu {
-        background: url(../Images/arrow_black.svg) no-repeat;
-        transform: rotate(180deg) translate(25px);
-    }
-}
-#iconMenu:active, #iconMenu:focus             {
-    background: url(../Images/arrow_black.svg) no-repeat;
-    transform: rotate(180deg) translate(25px);
-}
+
 #btnFilter a:active , #btnFilter a:focus{
     color: black;
     background-color: $color-primary-font;
 }
-.sous {
-    display: none;
-    position: absolute;
-    top: 44px;
-}
-.info a {
+
+.tagsLinkElement {
     text-decoration: none;
     color: $color-secondary-4-font;
     height: 24px;
@@ -185,7 +168,7 @@ figcaption{
     width: 376px;
     height: 69px;
     background-color: $color-primary-font;
-    color: white;
+    color: black;
 }
 i {
     margin-left: 10px;

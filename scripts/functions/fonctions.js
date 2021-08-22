@@ -1,6 +1,9 @@
 import { container, arrayMedia } from '../constantes.js';
 import {
-  priceDisplay, tagsDisplay, formDisplay, titleDisplay,
+  priceDisplay,
+  tagsDisplay,
+  formDisplay,
+  titleDisplay,
 } from './displayFunctions.js';
 import { Lightbox } from '../class.js';
 import { like } from './likeFunction.js';
@@ -13,8 +16,7 @@ export const getPhotographer = (source, filterId) => {
   // Boucle sur chaque photographe filtré afin de lui créer son propre article
   source.forEach((photograph) => {
     if (photograph.id === filterId) {
-      container.innerHTML
-            += `
+      container.innerHTML += `
             <article id="photograph${photograph.id}">
                 <section class="infoPhotograph">
                     <div class="info">
@@ -29,16 +31,14 @@ export const getPhotographer = (source, filterId) => {
                 </section>
                 <section class="medias">
                     <div class="filter">
-                    <h2>Trier par</h2>
-                    <nav id="btnFilter" alt="Order by" role=”button” aria-haspopup="lisbox" aria-expanded>
-                        <div class="deroulant">
-                            <a id="popular" href="#"><p>popularité</p><i id="iconMenu"></i></a>
-                            <ul class="sous" role="listbox", aria-activedescendant, aria-selected,  >
-                                <li><a id="date" href="#">date</a></li>
-                                <li><a id="titre" href="#">titre</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+                        <label for="btnFilter">Trier par</label>
+                        <nav>
+                            <select id="btnFilter" value=" ">
+                                <option value="Popularite">Popularité</option>
+                                <option value="Date">Date</option>
+                                <option value="Titre">Titre</option>
+                            </select>
+                        </nav>
                     </div>
                     <ul id="containerMedias">
                     </ul>
@@ -72,7 +72,7 @@ export const getMedias = (source) => {
                     <p>${mediaEl.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount">${mediaEl.likes}</p>
-                        <button class="iconLike" aria-label="likes">
+                        <button class="iconLike" aria-label='button-like'>
                             <i class="fas fa-heart"></i>
                         </button>
                     </div>
@@ -82,23 +82,22 @@ export const getMedias = (source) => {
     if (mediaEl.video) {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
-                <video controls alt="${mediaEl.alt}" type="video/mp4">
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
-                </video>
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}">
+                <video src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">Votre navigateur ne permet pas la lecture de ce fichier, mettez le à jour!</video>
                 </a>
                 <div class="infoMedias">
                     <p>${mediaEl.title}</p> 
                     <div class="likeSection">
                         <p class="likesCount">${mediaEl.likes}</p>
-                        <button class="iconLike" aria-label="likes">
-                            <i class="fas fa-heart"></i>
+                        <button class="iconLike" aria-label='button-like'>
+                            <i class="fas fa-heart" ></i>
                         </button>
                     </div>
                 </div>
             </li>`;
     }
   });
+  like();
 };
 
 // Section Tri par Titre / Date / Popularité

@@ -45,7 +45,8 @@ export const elInput = [
   {
     scope: lastName,
     regex: nameValid,
-    errorMessage: 'Veuillez rentrer votre nom de famille, entre 2 et 30 caractères.',
+    errorMessage:
+      'Veuillez rentrer votre nom de famille, entre 2 et 30 caractères.',
   },
   {
     scope: mail,
@@ -60,4 +61,6 @@ export const elInput = [
 ];
 
 // Lightbox
-export const lightboxContainer = document.getElementsByClassName('.lightbox__container');
+export const lightboxContainer = document.getElementsByClassName(
+  '.lightbox__container',
+);

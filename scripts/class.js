@@ -1,12 +1,17 @@
 // eslint-disable-next-line import/prefer-default-export
 export class Lightbox {
   static init() {
-    const links = Array.from(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'));
+    const links = Array.from(
+      document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'),
+    );
     const gallery = links.map((link) => link.getAttribute('href'));
     links.forEach((link) => link.addEventListener('click', (e) => {
       e.preventDefault();
-      const lightbox = new Lightbox(e.currentTarget.getAttribute('href'), gallery);
-      lightbox();
+      // eslint-disable-next-line no-unused-vars
+      const lightbox = new Lightbox(
+        e.currentTarget.getAttribute('href'),
+        gallery,
+      );
     }));
   }
 
@@ -85,9 +90,15 @@ export class Lightbox {
         <button aria-label="Précédent" class="lightbox__prev"></button>
         <div class="lightbox__container">
         </div>`;
-    dom.querySelector('.lightbox__close').addEventListener('click', this.close.bind(this));
-    dom.querySelector('.lightbox__next').addEventListener('click', this.next.bind(this));
-    dom.querySelector('.lightbox__prev').addEventListener('click', this.prev.bind(this));
+    dom
+      .querySelector('.lightbox__close')
+      .addEventListener('click', this.close.bind(this));
+    dom
+      .querySelector('.lightbox__next')
+      .addEventListener('click', this.next.bind(this));
+    dom
+      .querySelector('.lightbox__prev')
+      .addEventListener('click', this.prev.bind(this));
 
     return dom;
   }

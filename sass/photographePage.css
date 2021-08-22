@@ -86,7 +86,15 @@ h1 {
 
 #btnFilter {
   margin: 0px 20px;
+  padding: 0px 10px;
   cursor: pointer;
+  border-radius: 5px;
+  width: 170px;
+  height: 59px;
+  background-color: #901C1C;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 #btnFilter a {
@@ -101,17 +109,12 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  background-color: #901C1C;
-  width: 170px;
-  height: 59px;
   border-bottom: solid white 1px;
 }
 
-#popular {
-  border-radius: 5px;
+#btnFilter option {
+  width: 170px;
+  height: 59px;
 }
 
 #iconMenu {
@@ -120,46 +123,12 @@ h1 {
   height: 20%;
 }
 
-.deroulant:active, .deroulant:focus {
-  position: relative;
-}
-
-.deroulant:active .sous, .deroulant:focus .sous {
-  display: block;
-}
-
-.deroulant:active #titre, .deroulant:focus #titre {
-  border-radius: 0px 0px 5px 5px;
-}
-
-.deroulant:active #popular, .deroulant:focus #popular {
-  border-radius: 5px 5px  0px 0px;
-}
-
-.deroulant:active #iconMenu, .deroulant:focus #iconMenu {
-  background: url(../Images/arrow_black.svg) no-repeat;
-  -webkit-transform: rotate(180deg) translate(25px);
-          transform: rotate(180deg) translate(25px);
-}
-
-#iconMenu:active, #iconMenu:focus {
-  background: url(../Images/arrow_black.svg) no-repeat;
-  -webkit-transform: rotate(180deg) translate(25px);
-          transform: rotate(180deg) translate(25px);
-}
-
 #btnFilter a:active, #btnFilter a:focus {
   color: black;
   background-color: #D3573C;
 }
 
-.sous {
-  display: none;
-  position: absolute;
-  top: 44px;
-}
-
-.info a {
+.tagsLinkElement {
   text-decoration: none;
   color: #901C1C;
   height: 24px;
@@ -277,7 +246,7 @@ figcaption {
   width: 376px;
   height: 69px;
   background-color: #D3573C;
-  color: white;
+  color: black;
 }
 
 i {

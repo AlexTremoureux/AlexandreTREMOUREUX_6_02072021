@@ -49,3 +49,12 @@ article {
 #tagline {
     font-weight: bold;
 }
+.tagsLinkElement {
+    text-decoration: none;
+    color: $color-secondary-4-font;
+    height: 24px;
+    margin: 5px;
+    padding: 5px;
+    border: solid 0.1px rgb(190, 190, 190) ;
+    border-radius: 20px;
+}

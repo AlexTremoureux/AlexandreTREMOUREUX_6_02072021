@@ -17,41 +17,40 @@
             <img src="./Photos/logo.svg" alt="FishEye Home page">
         </a>
     </header>
-    <main>
+    <main id="mainWrapper" aria-hidden="false">
         <div id="container">
         </div>
+       
         <div id="price">
             <div id="likeInfo"></div>
             <div id="priceInfo"></div>
         </div>
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <div class="modalTop">
-                    <h1 class="modalText modalName">Contactez moi</h1>
-                    <span aria-label="Fermer" class="close">&times;</span>
-                </div>
-                <h2 class="modalText" id="modalText"></h2>
-                <form action="https://cible.php" method="post">
-                    <label for='firstName'>Prénom : </label>
-                    <input type='text' name='firstName' id='firstName' maxlength='30' required>
-                    <span class='miss'></span>
-                    <label for='lastName'>Nom : </label>
-                    <input type='text' name='lastName' id='lastName' maxlength='30' required>
-                    <span class='miss'></span>
-                    <label for='mail'>Email : </label>
-                    <input type='email' name='mail' id='mail' required>
-                    <span class='miss'></span>
-                    <label for='message'>Votre message :</label>
-                    <input type='textarea' name='message' id='message' maxlength='200' required>
-                    <span class='miss'></span>
-                    <input type='submit' value='Envoyer' id='btnValidate'>
-                </form>
-            </div>
-          
-        </div>
-
     </main>
+    <!-- Formulaire -->
+    <div id="myModal" class="modal" role=”dialog” aria-hidden="true">
+        <div class="modal-content">
+            <div class="modalTop">
+                <h1 class="modalText modalName">Contactez moi</h1>
+                <span aria-label="Fermer" class="close">&times;</span>
+            </div>
+            <h2 class="modalText" id="modalText"></h2>
+            <form action="https://cible.php" method="post">
+                <label for='firstName'>Prénom : </label>
+                <input type='text' name='firstName' id='firstName' maxlength='30' required aria-required=true aria-invalid=true>
+                <span class='miss'></span>
+                <label for='lastName'>Nom : </label>
+                <input type='text' name='lastName' id='lastName' maxlength='30' required aria-required=true aria-invalid=true>
+                <span class='miss'></span>
+                <label for='mail'>Email : </label>
+                <input type='email' name='mail' id='mail' required aria-required=true aria-invalid=true>
+                <span class='miss'></span>
+                <label for='message'>Votre message :</label>
+                <input type='textarea' name='message' id='message' maxlength='200' required aria-required=true aria-invalid=true>
+                <span class='miss'></span>
+                <input type='submit' value='Envoyer' id='btnValidate'>
+            </form>
+        </div>
+    </div>
     <script type ="module" src="./scripts/photographPage.js"></script>
 </body>
 </html>
