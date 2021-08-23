@@ -1,4 +1,6 @@
-import { elInput, modal, modalFirstName } from '../constantes.js';
+import {
+  elInput, mainWrapper, modal, modalFirstName,
+} from '../constantes.js';
 
 // Fonction de validation de chaque Input
 const inputValid = () => {
@@ -26,7 +28,7 @@ const inputValid = () => {
   });
   return countValidationInput === elInput.length;
 };
-const mainWrapper = document.getElementById('mainWrapper');
+
 // launch modal function
 export const launchModal = () => {
   modal.style.display = 'flex';

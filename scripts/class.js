@@ -1,3 +1,5 @@
+import { mainWrapper } from './constantes.js';
+
 // eslint-disable-next-line import/prefer-default-export
 export class Lightbox {
   static init() {
@@ -61,6 +63,7 @@ export class Lightbox {
       this.element.parentElement.removeChild(this.element);
     }, 500);
     document.removeEventListener('keyup', this.onKeyUp);
+    mainWrapper.setAttribute('aria-hidden', 'false');
   }
 
   next(e) {
@@ -84,6 +87,8 @@ export class Lightbox {
   buildDOM() {
     const dom = document.createElement('div');
     dom.classList.add('lightbox');
+    mainWrapper.setAttribute('aria-hidden', 'true');
+    dom.setAttribute('aria-hidden', 'false');
     dom.innerHTML = `
         <button aria-label="Fermer" class="lightbox__close"></button>
         <button aria-label="Suivant" class="lightbox__next"></button>

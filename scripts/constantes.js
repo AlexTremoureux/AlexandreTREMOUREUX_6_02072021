@@ -7,6 +7,7 @@ export const ENV = DEV || PROD;
 
 // DOM
 export const container = document.getElementById('container');
+export const mainWrapper = document.getElementById('mainWrapper');
 export const title = document.getElementById('title');
 
 export const popular = document.querySelectorAll('popular');
