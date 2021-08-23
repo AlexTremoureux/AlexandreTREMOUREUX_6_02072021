@@ -1,40 +1,89 @@
 @import "./variables.scss";
-
-h1{
-    width: 20%;
-    float: right;
-    margin-top: -50px;
-    color: $color-secondary-4-font;
+body {
+    font-family : 'DM Sans', sans-serif ;
+    width: 100%;
+    max-width: 2500px;
+    margin: auto;
 }
+
 a {
     text-decoration: none;
     color: $color-primary-font;
 }
 li {
     list-style: none;
-}
-ul {
-    display: flex;
-    justify-content: space-evenly;
-    
+    margin: 4px 0px;
 }
 header {
     display: flex;
-    align-items: center;
-    width: 70%;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    @media screen and (min-width: 900px) {
+        width: 80%;
+        flex-wrap: nowrap;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 90%;
+    }
+}
+#logo img{
+    width: 150px;
+    padding-top: 40px;
+    padding-left: 5px;
+    @media screen and (min-width: 900px) {
+        width: 200px;
+    }
+}
+#nav {
+    width: 100%;
+}
+#nav ul, .tagSection ul{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    height: 90px;
+}
+.tagsLinkElement {
+    text-decoration: none;
+    color: $color-secondary-4-font;
+    height: 22px;
+    margin: 5px;
+    padding: 2px 8px;
+    border: solid 0.1px rgb(190, 190, 190) ;
+    border-radius: 20px;
+}
+h1{
+    width: 120px;
+    font-size: 0.9rem;
+    float: right;
+    margin-top: -155px;
+    margin-left: 60%;
+    color: $color-secondary-4-font;
+    @media screen and (min-width: 900px) {
+        width: 19%;
+        height: 122px;
+        max-width: 240px;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: -122px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 #container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 article {
     text-align: center;
-    width: 300px;
+    width: 350px;
     height: 450px;
-    margin: 20px 100px 20px 100px;
+    margin: 20px 60px;
 }
 #portrait {
     width: 200px;
@@ -48,13 +97,4 @@ article {
 }
 #tagline {
     font-weight: bold;
-}
-.tagsLinkElement {
-    text-decoration: none;
-    color: $color-secondary-4-font;
-    height: 24px;
-    margin: 5px;
-    padding: 5px;
-    border: solid 0.1px rgb(190, 190, 190) ;
-    border-radius: 20px;
 }

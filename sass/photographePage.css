@@ -1,11 +1,19 @@
 /*Variables*/
 body {
   font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  max-width: 100%;
+  margin: auto;
+}
+
+li {
+  list-style: none;
 }
 
 header {
   height: 100px;
-  margin-left: 20px;
+  width: 95%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,29 +25,99 @@ header {
           align-items: center;
 }
 
+#mainWrapper {
+  max-width: 95%;
+}
+
+#container {
+  width: 95%;
+  margin: auto;
+}
+
 .infoPhotograph {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
+  max-width: 100%;
 }
 
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 35%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  margin-left: 20px;
+  max-width: 50%;
+}
+
+#portrait {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: right;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #D3573C;
+  margin: 0px;
+}
+
+#localisation, #tags, #nav {
+  color: #901C1C;
+}
+
+#tags, #nav {
+  font-weight: 500;
+}
+
+#tagline {
+  color: #757575;
+}
+
+#localisation, #tagline {
+  margin: 5px 0px;
+}
+
+.tagsLinkElement {
+  text-decoration: none;
+  color: #901C1C;
+  height: 22px;
+  margin: 5px;
+  padding: 2px 8px;
+  border: solid 0.1px #bebebe;
+  border-radius: 20px;
+}
+
+.info li {
+  margin: 4px 0px;
+}
+
+.info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 200px;
+  padding-left: 0px;
+  margin: 5px 0px 20px 0px;
+}
+
+#btnContact {
+  position: fixed;
+  bottom: 75px;
+  left: 25%;
 }
 
 .contact, #btnValidate {
-  width: 170px;
-  height: 69px;
+  width: 50%;
+  height: 49px;
   font-size: 1.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,22 +134,6 @@ header {
   cursor: pointer;
 }
 
-#portrait {
-  width: 200px;
-  height: 200px;
-  margin: auto 10% auto auto;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  text-align: right;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #D3573C;
-  margin: 0px;
-}
-
 .filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,6 +144,11 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.filter label {
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 #btnFilter {
@@ -128,48 +195,29 @@ h1 {
   background-color: #D3573C;
 }
 
-.tagsLinkElement {
-  text-decoration: none;
-  color: #901C1C;
-  height: 24px;
-  margin: 5px;
-  padding: 5px;
-  border: solid 0.1px #bebebe;
-  border-radius: 20px;
-}
-
-li {
-  list-style: none;
-}
-
-ul {
+#containerMedias {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  padding-left: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
 }
 
-#localisation, #tags, #nav {
-  font-weight: bold;
-  color: #901C1C;
+.medias li {
+  width: 250px;
+  margin: 5px 10px;
+  border-radius: 5px;
 }
 
-#tagline {
-  font-weight: bold;
-}
-
-#container {
-  width: 95%;
-  margin: auto;
-  text-align: center;
-}
-
-.medias img, video {
-  width: 350px;
-  height: 300px;
+.medias img, .medias video {
+  width: 250px;
+  height: 190px;
+  border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 20%;
@@ -205,17 +253,6 @@ ul {
   font-size: 1.2rem;
 }
 
-#containerMedias {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 figcaption {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,7 +280,8 @@ figcaption {
   bottom: 0px;
   border-radius: 5px;
   float: right;
-  width: 376px;
+  width: 100%;
+  max-width: 350px;
   height: 69px;
   background-color: #D3573C;
   color: black;

@@ -1,29 +1,91 @@
 @import "./variables.scss";
+
 body{
     font-family : 'DM Sans', sans-serif ;
+    font-weight: 400;
+    max-width: 100%;
+    margin: auto;
+}
+li {
+    list-style: none;
 }
 header {
     height: 100px;
-    margin-left: 20px;
+    width: 95%;
+    margin: auto;
     display: flex;
     justify-content: left;
     align-items: center;
 }
-
+#mainWrapper {
+    max-width: 95%;
+}
+#container  {
+    width: 95%;
+    margin: auto;  
+}
 .infoPhotograph {
     display: flex;
-    margin: auto;
+    max-width: 100%;
 }
 .info {
     display: flex;
-    width: 35%;
     flex-direction: column;
     text-align: left;
-    margin-left: 20px;
+    max-width: 50%;
+}
+#portrait {
+    width: 100px;
+    height: 100px;;
+    border-radius: 50%;
+    object-fit: cover;
+    text-align: right;
+}
+h1 {
+    font-size: 2rem;
+    color: $color-primary-font;
+    margin: 0px;
+}
+#localisation, #tags, #nav {
+    color: $color-secondary-4-font;
+}
+#tags, #nav {
+    font-weight: 500;
+}
+#tagline {
+    color: #757575;
+}
+#localisation, #tagline {
+    margin: 5px 0px;
+}
+.tagsLinkElement {
+    text-decoration: none;
+    color: $color-secondary-4-font;
+    height: 22px;
+    margin: 5px;
+    padding: 2px 8px;
+    border: solid 0.1px rgb(190, 190, 190) ;
+    border-radius: 20px;
+}
+.info li {
+    margin: 4px 0px;
+}
+.info ul {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 200px;
+    padding-left: 0px;
+    margin: 5px 0px 20px 0px;
+}
+// -------------------Formulaire de contact-----------------------------
+#btnContact {
+    position: fixed;
+    bottom: 75px;
+    left: 25%;
 }
 .contact , #btnValidate {
-    width: 170px;
-    height: 69px;
+    width: 50%;
+    height: 49px;
     font-size: 1.4rem;
     display: flex;
     justify-content: center;
@@ -33,24 +95,16 @@ header {
     color: white;
     cursor: pointer;
 }
-#portrait {
-    width: 200px;
-    height: 200px;
-    margin: auto 10% auto auto;
-    border-radius: 50%;
-    object-fit: cover;
-    text-align: right;
-}
-h1 {
-    font-size: 3rem;
-    color: $color-primary-font;
-    margin: 0px;
-}
+
 //----------------------------Filtre de recherche-----------------------------------------
 .filter {
     display: flex;
     justify-content: left;
     align-items: center;
+}
+.filter label {
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 #btnFilter {
     margin: 0px 20px;
@@ -70,9 +124,6 @@ h1 {
     padding-left: 20px;
     align-items: center;
     text-decoration: none;
-    
-    
-    
     border-bottom: solid white 1px;
 }
 #btnFilter option {
@@ -91,40 +142,24 @@ h1 {
     background-color: $color-primary-font;
 }
 
-.tagsLinkElement {
-    text-decoration: none;
-    color: $color-secondary-4-font;
-    height: 24px;
-    margin: 5px;
-    padding: 5px;
-    border: solid 0.1px rgb(190, 190, 190) ;
-    border-radius: 20px;
-}
-li {
-    list-style: none;
-}
-ul {
-    display: flex;
-    justify-content: left;
-    padding-left: 0px;
-}
-
-#localisation, #tags, #nav {
-    font-weight: bold;
-    color: $color-secondary-4-font;
-}
-#tagline {
-    font-weight: bold;
-}
 //------------------------------------------Partie Médias------------------------------------------------
-#container {
-    width: 95%;
-    margin: auto;
-    text-align: center;
+
+#containerMedias {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
 }
-.medias img ,video {
-    width: 350px;
-    height: 300px;
+.medias li{
+    width: 250px;
+    margin: 5px 10px;
+    border-radius: 5px;
+}
+.medias img , .medias video {
+    width: 250px;
+    height: 190px;
+    border-radius: 5px;
     object-fit: cover;
     object-position: 50% 20%;
 }
@@ -146,12 +181,6 @@ ul {
     color: $color-secondary-4-font;
     font-size: 1.2rem;
 }
-
-#containerMedias{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
 figcaption{
     display: flex;
     justify-content: space-between;
@@ -165,7 +194,8 @@ figcaption{
     bottom: 0px;
     border-radius: 5px;
     float: right;
-    width: 376px;
+    width: 100%;
+    max-width: 350px;
     height: 69px;
     background-color: $color-primary-font;
     color: black;
