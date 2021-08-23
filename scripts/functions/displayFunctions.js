@@ -1,5 +1,25 @@
 import { priceInfo, title, modalText } from '../constantes.js';
 
+// Fonction pour passer au contenu
+export const goToContent = () => {
+  const body = document.querySelector('body');
+  body.insertAdjacentHTML('afterbegin',
+    `<div id='goContent'>
+    <a class='linkGoContent' href = '#container' title='cliquez afin de passer au contenu'
+      <h4>Passer au contenu</h4>
+    </a>
+  </div>
+  `);
+  const showLinkGoContent = () => {
+    const divGoContent = document.getElementById('goContent');
+    body.onscroll = () => {
+      divGoContent.style.display = 'block';
+      divGoContent.focus();
+    };
+  };
+  showLinkGoContent();
+};
+
 // Affichage des tags correspondant au photographe
 export const tagsDisplay = (tags, id) => {
   const tagList = document.getElementById(`tagList${id}`);
