@@ -34,7 +34,7 @@ export const getPhotographFilter = async function getPhotographFilter(filter) {
       // Boucle forEach afin d'afficher les différents tags de chaque photographe
       const tagList = document.getElementById(`tagList${photograph.id}`);
       photograph.tags.forEach((tagsElement) => {
-        tagList.innerHTML += `<li id="tags"><a class="navFilter" alt="tag" href="#">#${tagsElement}</a></li>`;
+        tagList.innerHTML += `<li id="tags"><a class="navFilter tagsLinkElement" alt="tag" href="#">#${tagsElement}</a></li>`;
       });
     }
   });

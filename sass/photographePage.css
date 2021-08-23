@@ -25,10 +25,6 @@ header {
           align-items: center;
 }
 
-#mainWrapper {
-  max-width: 95%;
-}
-
 #container {
   width: 95%;
   margin: auto;
@@ -39,6 +35,9 @@ header {
   display: -ms-flexbox;
   display: flex;
   max-width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .info {
@@ -54,12 +53,20 @@ header {
 }
 
 #portrait {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  margin-right: 10%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   text-align: right;
+}
+
+@media screen and (min-width: 900px) {
+  #portrait {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 h1 {
@@ -87,6 +94,7 @@ h1 {
 .tagsLinkElement {
   text-decoration: none;
   color: #901C1C;
+  font-weight: 500;
   height: 22px;
   margin: 5px;
   padding: 2px 8px;
@@ -112,11 +120,21 @@ h1 {
 #btnContact {
   position: fixed;
   bottom: 75px;
-  left: 25%;
+  left: 50%;
+  margin-left: -90px;
+}
+
+@media screen and (min-width: 900px) {
+  #btnContact {
+    position: relative;
+    top: 0px;
+    left: -10px;
+  }
 }
 
 .contact, #btnValidate {
   width: 50%;
+  max-width: 170px;
   height: 49px;
   font-size: 1.4rem;
   display: -webkit-box;
@@ -135,15 +153,21 @@ h1 {
 }
 
 .filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .filter label {
@@ -196,7 +220,6 @@ h1 {
 }
 
 #containerMedias {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,23 +228,48 @@ h1 {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
   padding: 0;
 }
 
 .medias li {
-  width: 250px;
+  width: 270px;
   margin: 5px 10px;
   border-radius: 5px;
 }
 
+@media screen and (min-width: 370px) {
+  .medias li {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .medias li {
+    width: 350px;
+  }
+}
+
 .medias img, .medias video {
-  width: 250px;
+  width: 270px;
   height: 190px;
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 20%;
      object-position: 50% 20%;
+}
+
+@media screen and (min-width: 370px) {
+  .medias img, .medias video {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .medias img, .medias video {
+    width: 350px;
+  }
 }
 
 .infoMedias {
@@ -237,7 +285,6 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-weight: bold;
   color: #901C1C;
 }
 
@@ -247,9 +294,14 @@ h1 {
   display: flex;
 }
 
+.likesCount {
+  font-weight: 500;
+}
+
 .iconLike {
   border: none;
   color: #901C1C;
+  background-color: white;
   font-size: 1.2rem;
 }
 
@@ -263,8 +315,7 @@ figcaption {
 }
 
 #price {
-  position: -webkit-sticky;
-  position: sticky;
+  position: static;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,6 +329,8 @@ figcaption {
       -ms-flex-align: center;
           align-items: center;
   bottom: 0px;
+  right: 37px;
+  margin-top: 20px;
   border-radius: 5px;
   float: right;
   width: 100%;
@@ -285,6 +338,13 @@ figcaption {
   height: 69px;
   background-color: #D3573C;
   color: black;
+}
+
+@media screen and (min-width: 900px) {
+  #price {
+    position: -webkit-sticky;
+    position: sticky;
+  }
 }
 
 i {

@@ -5,9 +5,10 @@
   background-color: #D3573C;
   z-index: 1;
   top: 20px;
-  left: 30%;
   height: 80%;
-  width: 40%;
+  width: 100%;
+  max-width: 500px;
+  min-width: 280px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -15,6 +16,13 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .modal {
+    left: 50%;
+    margin-left: -200px;
+  }
 }
 
 .modal-content {
@@ -52,11 +60,12 @@ form {
 
 .modalText {
   color: black;
+  font-weight: 400;
 }
 
 .modalName {
-  font-size: 3rem;
-  font-weight: normal;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 input {

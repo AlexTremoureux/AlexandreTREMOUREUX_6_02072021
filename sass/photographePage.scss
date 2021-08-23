@@ -17,9 +17,6 @@ header {
     justify-content: left;
     align-items: center;
 }
-#mainWrapper {
-    max-width: 95%;
-}
 #container  {
     width: 95%;
     margin: auto;  
@@ -27,6 +24,7 @@ header {
 .infoPhotograph {
     display: flex;
     max-width: 100%;
+    justify-content: space-between;
 }
 .info {
     display: flex;
@@ -35,11 +33,16 @@ header {
     max-width: 50%;
 }
 #portrait {
-    width: 100px;
-    height: 100px;;
+    width: 120px;
+    height: 120px;
+    margin-right: 10%;
     border-radius: 50%;
     object-fit: cover;
     text-align: right;
+    @media screen and (min-width: 900px) {
+        width: 200px;
+        height: 200px;
+    }
 }
 h1 {
     font-size: 2rem;
@@ -61,6 +64,7 @@ h1 {
 .tagsLinkElement {
     text-decoration: none;
     color: $color-secondary-4-font;
+    font-weight: 500;
     height: 22px;
     margin: 5px;
     padding: 2px 8px;
@@ -81,10 +85,17 @@ h1 {
 #btnContact {
     position: fixed;
     bottom: 75px;
-    left: 25%;
+    left: 50%;
+    margin-left: -90px;
+    @media screen and (min-width: 900px) {
+        position: relative;
+        top: 0px;
+        left: -10px;
+    }
 }
 .contact , #btnValidate {
     width: 50%;
+    max-width: 170px;
     height: 49px;
     font-size: 1.4rem;
     display: flex;
@@ -98,9 +109,12 @@ h1 {
 
 //----------------------------Filtre de recherche-----------------------------------------
 .filter {
-    display: flex;
+    display: none;
     justify-content: left;
     align-items: center;
+    @media screen and (min-width: 900px) {
+        display: flex;
+    }
 }
 .filter label {
     font-weight: 700;
@@ -145,23 +159,35 @@ h1 {
 //------------------------------------------Partie Médias------------------------------------------------
 
 #containerMedias {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
     padding: 0;
 }
 .medias li{
-    width: 250px;
+    width: 270px;
     margin: 5px 10px;
     border-radius: 5px;
+    @media screen and (min-width: 370px) {
+        width: 330px;
+    }
+    @media screen and (min-width: 420px) {
+        width: 350px;
+    }
 }
 .medias img , .medias video {
-    width: 250px;
+    width: 270px;
     height: 190px;
     border-radius: 5px;
     object-fit: cover;
     object-position: 50% 20%;
+    @media screen and (min-width: 370px) {
+        width: 330px;
+    }
+    @media screen and (min-width: 420px) {
+        width: 350px;
+    }
 }
 .infoMedias{
     display: flex;
@@ -169,16 +195,19 @@ h1 {
     align-self: center;
     height: 50px;
     justify-content: space-between;
-    font-weight: bold;
     color: $color-secondary-4-font;
     
 }
 .likeSection {
     display: flex;
 }
+.likesCount {
+    font-weight: 500;
+}
 .iconLike {
     border: none;
     color: $color-secondary-4-font;
+    background-color: white;
     font-size: 1.2rem;
 }
 figcaption{
@@ -186,12 +215,14 @@ figcaption{
     justify-content: space-between;
 }
 #price {
-    position: sticky;
+    position: static;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     bottom: 0px;
+    right: 37px;
+    margin-top: 20px;
     border-radius: 5px;
     float: right;
     width: 100%;
@@ -199,6 +230,9 @@ figcaption{
     height: 69px;
     background-color: $color-primary-font;
     color: black;
+    @media screen and (min-width: 900px) {
+        position: sticky;
+    }
 }
 i {
     margin-left: 10px;
