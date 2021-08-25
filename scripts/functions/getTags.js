@@ -1,11 +1,11 @@
-import { ENV } from '../constantes.js';
+import { url } from '../constantes.js';
 // eslint-disable-next-line import/no-cycle
 import { getPhotographFilter } from './getPhotographFilter.js';
 
 // Fonction getTags venant fetch les données pour afficher la liste de filtres de navigation
 // eslint-disable-next-line import/prefer-default-export
 export const getTags = async function getTags() {
-  const response = await fetch(ENV);
+  const response = await fetch(url);
   const data = await response.json().catch((error) => {
     // eslint-disable-next-line no-console
     console.log(error);

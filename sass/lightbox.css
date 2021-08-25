@@ -78,12 +78,19 @@
           align-items: center;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
   height: 100vh;
   max-width: 80%;
 }
 
 .lightbox__container img {
-  width: 80%;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.lightbox__container video {
+  max-width: 100%;
   max-height: 100vh;
 }
 /*# sourceMappingURL=lightbox.css.map */

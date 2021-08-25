@@ -1,11 +1,11 @@
-import { container, ENV } from '../constantes.js';
+import { container, url } from '../constantes.js';
 // eslint-disable-next-line import/no-cycle
 import { getTags } from './getTags.js';
 
 // Fonction getPhotographFilter venant fetch les données et remplir les articles filtrés par tags
 // eslint-disable-next-line import/prefer-default-export
 export const getPhotographFilter = async function getPhotographFilter(filter) {
-  const response = await fetch(ENV);
+  const response = await fetch(url);
   const data = await response.json().catch((error) => {
     // eslint-disable-next-line no-console
     console.log(error);

@@ -1,4 +1,4 @@
-import { container, arrayMedia } from '../constantes.js';
+import { container } from '../constantes.js';
 import {
   priceDisplay,
   tagsDisplay,
@@ -83,7 +83,11 @@ export const getMedias = (source) => {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
                 <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}">
-                <video src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">Votre navigateur ne permet pas la lecture de ce fichier, mettez le à jour!</video>
+                <video> title="${mediaEl.title}" 
+                    <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
+                    Lien vers ${mediaEl.title}
+                    <track src="./Photos/Medias/Sample Photos/${firstName}/fichier.vtt" label="French captions" kind="captions" srclang="fr" default>
+                </video>
                 </a>
                 <div class="infoMedias">
                     <p>${mediaEl.title}</p> 
@@ -100,31 +104,13 @@ export const getMedias = (source) => {
   like();
 };
 
-// Section Tri par Titre / Date / Popularité
-let arrayFilterByLikes = [];
-let arrayFilterByTitle = [];
-let arrayFilterByDate = [];
-
-// Fonction servant à trier les différents array par catégorie
-export const fillArrayFilter = () => {
-  arrayMedia.forEach((element) => {
-    arrayFilterByTitle.push(element.title);
-    arrayFilterByDate.push(element.date);
-  });
-  arrayFilterByLikes = arrayMedia.sort((a, b) => b.likes - a.likes);
-  arrayFilterByDate = arrayFilterByDate.sort().reverse();
-  arrayFilterByDate = [...new Set(arrayFilterByDate)];
-  arrayFilterByTitle = arrayFilterByTitle.sort();
-};
-
-// Fonction venant trier les titres des médias par ordre alphabétique
-export const mediasFilterByTitle = () => {
+// Fonction venant afficher les médias en fonction de l'array utilisé en paramètre
+export const mediasFilterBy = (array) => {
   const containerMedias = document.getElementById('containerMedias');
   containerMedias.innerHTML = '';
-  arrayFilterByTitle.forEach((titre) => {
-    arrayMedia.forEach((element) => {
-      if (element.title === titre && element.image) {
-        containerMedias.innerHTML += `
+  array.forEach((element) => {
+    if (element.image) {
+      containerMedias.innerHTML += `
             <li class="medias">
                 <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
                 <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
@@ -139,107 +125,12 @@ export const mediasFilterByTitle = () => {
                     </div>
                 </div>
             </li>`;
-      }
-      if (element.title === titre && element.video) {
-        containerMedias.innerHTML += `
-            <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
-                <video controls alt="${element.alt}" type="video/mp4">
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
-                </video>
-                </a>
-                <div class="infoMedias">
-                    <p>${element.title}</p> 
-                    <div class="likeSection">
-                        <p class="likesCount likesCount${element.id}">${element.likes}</p>
-                        <button class="iconLike iconLike${element.id}" aria-label="likes">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </li>`;
-      }
-    });
-  });
-  Lightbox.init();
-  like();
-};
-
-// Fonction venant trier les médias par date
-export const mediasFilterByDate = () => {
-  const containerMedias = document.getElementById('containerMedias');
-  containerMedias.innerHTML = '';
-  arrayFilterByDate.forEach((date) => {
-    arrayMedia.forEach((element) => {
-      if (element.date === date && element.image) {
-        containerMedias.innerHTML += `
-            <li class="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
-                <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="alt="${element.alt}">
-                </a>
-                <div class="infoMedias">
-                    <p>${element.title}</p> 
-                    <div class="likeSection">
-                        <p class="likesCount">${element.likes}</p>
-                        <button class="iconLike" aria-label="likes">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </li>`;
-      }
-      if (element.date === date && element.video) {
-        containerMedias.innerHTML += `
-            <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
-                <video controls>
-                    <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
-                </video>
-                </a>
-                <div class="infoMedias">
-                    <p>${element.title}</p> 
-                    <div class="likeSection">
-                        <p class="likesCount likesCount${element.id}">${element.likes}</p>
-                        <button class="iconLike iconLike${element.id}" aria-label="likes">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </li>`;
-      }
-    });
-  });
-  Lightbox.init();
-  like();
-};
-
-// Fonction venant trier les médias par popularité
-export const mediasFilterByLikes = () => {
-  const containerMedias = document.getElementById('containerMedias');
-  containerMedias.innerHTML = '';
-  arrayFilterByLikes.forEach((element) => {
-    if (element.image) {
-      containerMedias.innerHTML += `
-        <li class="medias">
-            <a href="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
-            <img src="./Photos/Medias/Sample Photos/${firstName}/${element.image.replace('-', '')}" alt="${element.alt}">
-            </a>
-            <div class="infoMedias">
-                <p>${element.title}</p> 
-                <div class="likeSection">
-                    <p class="likesCount">${element.likes}</p>
-                    <button class="iconLike" aria-label="likes">
-                        <i class="fas fa-heart"></i>
-                    </button>
-                </div>
-            </div>
-        </li>`;
     }
     if (element.video) {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
                 <a href="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
-                <video controls>
+                <video title="${element.title}" alt="${element.alt}">Lien vers ${element.title}
                     <source src="./Photos/Medias/Sample Photos/${firstName}/${element.video}" alt="${element.alt}" type="video/mp4">
                 </video>
                 </a>

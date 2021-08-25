@@ -1,10 +1,10 @@
-import { container, ENV } from '../constantes.js';
+import { container, url } from '../constantes.js';
 import { getPhotographFilter } from './getPhotographFilter.js';
 
 // Fonction getPhotograph venant fetch les données et remplir les articles
 // eslint-disable-next-line import/prefer-default-export
 export const getPhotograph = async function getPhotograph() {
-  const response = await fetch(ENV);
+  const response = await fetch(url);
   const data = await response.json().catch((error) => {
     // eslint-disable-next-line no-console
     console.log(error);
