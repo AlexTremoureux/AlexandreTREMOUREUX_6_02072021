@@ -83,7 +83,7 @@ export const getMedias = (source) => {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
                 <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}">
-                <video> title="${mediaEl.title}" 
+                <video>
                     <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
                     Lien vers ${mediaEl.title}
                     <track src="./Photos/Medias/Sample Photos/${firstName}/fichier.vtt" label="French captions" kind="captions" srclang="fr" default>
