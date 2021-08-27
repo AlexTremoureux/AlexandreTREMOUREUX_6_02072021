@@ -98,6 +98,11 @@ header {
   border-radius: 20px;
 }
 
+.tagsLinkElement:focus, .tagsLinkElement:hover {
+  background-color: #901C1C;
+  color: white;
+}
+
 h1 {
   width: 120px;
   font-size: 0.9rem;

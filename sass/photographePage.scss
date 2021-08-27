@@ -73,6 +73,10 @@ h1 {
     border: solid 0.1px rgb(190, 190, 190) ;
     border-radius: 20px;
 }
+.tagsLinkElement:focus, .tagsLinkElement:hover {
+    background-color: $color-primary-bg;
+    color: white;
+}
 .info li {
     margin: 4px 0px;
 }

@@ -4,8 +4,8 @@
   position: fixed;
   background-color: #D3573C;
   z-index: 1;
-  top: 20px;
-  height: 80%;
+  top: 0px;
+  height: 100%;
   width: 100%;
   max-width: 500px;
   min-width: 280px;
@@ -20,6 +20,8 @@
 
 @media screen and (min-width: 900px) {
   .modal {
+    top: 20px;
+    height: 80%;
     left: 50%;
     margin-left: -200px;
   }

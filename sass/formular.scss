@@ -4,8 +4,8 @@
     position: fixed;
     background-color: $color-primary-font;
     z-index: 1;
-    top: 20px;
-    height: 80%;
+    top: 0px;
+    height: 100%;
     width: 100%;
     max-width: 500px;
     min-width: 280px;
@@ -13,6 +13,8 @@
     align-items: center;
     font-size: 1.2rem;
     @media screen and (min-width: 900px) {
+        top: 20px;
+        height: 80%;
         left: 50%;
         margin-left: -200px;
     }

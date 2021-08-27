@@ -70,6 +70,10 @@ header {
     border: solid 0.1px rgb(190, 190, 190) ;
     border-radius: 20px;
 }
+.tagsLinkElement:focus, .tagsLinkElement:hover {
+    background-color: $color-primary-bg;
+    color: white;
+}
 h1{
     width: 120px;
     font-size: 0.9rem;

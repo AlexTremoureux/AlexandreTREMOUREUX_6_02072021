@@ -33,7 +33,7 @@ export const getPhotographer = (source, filterId) => {
                     <div class="filter">
                         <label for="btnFilter">Trier par</label>
                         <nav>
-                            <select id="btnFilter" value=" ">
+                            <select id="btnFilter" value="">
                                 <option value="Popularite">Popularité</option>
                                 <option value="Date">Date</option>
                                 <option value="Titre">Titre</option>
@@ -65,7 +65,7 @@ export const getMedias = (source) => {
     if (mediaEl.image) {
       containerMedias.innerHTML += `
             <li class="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}" alt="${mediaEl.alt}">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}" alt="${mediaEl.alt}" title="${mediaEl.title}">
                 <img src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.image.replace('-', '')}" alt="${mediaEl.alt}">
                 </a>
                 <div class="infoMedias">
@@ -82,7 +82,7 @@ export const getMedias = (source) => {
     if (mediaEl.video) {
       containerMedias.innerHTML += `
             <li class="medias" id="medias">
-                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}">
+                <a href="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" title="${mediaEl.title}">
                 <video>
                     <source src="./Photos/Medias/Sample Photos/${firstName}/${mediaEl.video}" alt="${mediaEl.alt}" type="video/mp4">
                     Lien vers ${mediaEl.title}

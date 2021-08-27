@@ -5,8 +5,8 @@
   position: fixed;
   background-color: #D3573C;
   z-index: 1;
-  top: 20px;
-  height: 80%;
+  top: 0px;
+  height: 100%;
   width: 100%;
   max-width: 500px;
   min-width: 280px;
@@ -21,6 +21,8 @@
 
 @media screen and (min-width: 900px) {
   .modal {
+    top: 20px;
+    height: 80%;
     left: 50%;
     margin-left: -200px;
   }
@@ -165,6 +167,10 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -175,18 +181,22 @@ input {
   margin-right: 10%;
   margin-top: auto;
   margin-bottom: auto;
-  height: 100vh;
+  height: 90vh;
   max-width: 80%;
 }
 
 .lightbox__container img {
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 90vh;
 }
 
 .lightbox__container video {
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 90vh;
+}
+
+.lightbox__container p {
+  color: #901C1C;
 }
 
 body {
@@ -290,6 +300,11 @@ h1 {
   padding: 2px 8px;
   border: solid 0.1px #bebebe;
   border-radius: 20px;
+}
+
+.tagsLinkElement:focus, .tagsLinkElement:hover {
+  background-color: #901C1C;
+  color: white;
 }
 
 .info li {

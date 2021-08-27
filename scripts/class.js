@@ -8,9 +8,10 @@ export class Lightbox {
     const links = Array.from(
       document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'),
     );
-    // Création d'un tableau de valeurs href des médias
+    // Création de tableaux de valeurs href/alt/title des médias
     const gallery = links.map((link) => link.getAttribute('href'));
     const txtAlt = links.map((link) => link.getAttribute('alt'));
+    const arrayTitle = links.map((link) => link.getAttribute('title'));
     // Tableau regroupant les chemins de vichiers .vtt
     const trackVtt = Array.from(document.querySelectorAll('track[src$=".vtt"]'));
     const urlVtt = trackVtt.map((vtt) => vtt.getAttribute('src'));
@@ -23,44 +24,54 @@ export class Lightbox {
         e.currentTarget.getAttribute('alt'),
         txtAlt,
         gallery,
+        e.currentTarget.getAttribute('title'),
+        arrayTitle,
         urlVtt,
       );
     }));
   }
 
   // Paramètres: url de l'image, chemin des images de la lightbox
-  constructor(url, alt, txtAlt, medias, urlVtt) {
+  constructor(url, alt, txtAlt, medias, title, arrayTitle, urlVtt) {
     // construction du DOM à partir de l'url
     this.element = this.buildDOM();
     this.txtAlt = txtAlt;
     this.medias = medias;
+    this.title = title;
+    this.arrayTitle = arrayTitle;
     this.urlVtt = urlVtt;
-    this.loadMedias(url, alt, urlVtt);
+    this.loadMedias(url, alt, title, urlVtt);
     this.onKeyUp = this.onKeyUp.bind(this);
     // Ajout de l'element lightbox
     document.body.appendChild(this.element);
     document.addEventListener('keyup', this.onKeyUp);
   }
 
-  loadMedias(url, alt, urlVtt) {
+  loadMedias(url, alt, title, urlVtt) {
     if (url.includes('.jpg')) {
       const image = new Image();
+      const paragraphTitle = document.createElement('p');
       const container = this.element.querySelector('.lightbox__container');
       container.innerHTML = '';
       this.alt = alt;
       this.url = url;
+      this.title = title;
       container.appendChild(image);
       image.src = url;
       image.alt = alt;
+      container.appendChild(paragraphTitle);
+      paragraphTitle.innerHTML = title;
     }
     if (url.includes('.mp4')) {
       const video = document.createElement('video');
       const source = document.createElement('source');
       const track = document.createElement('track');
+      const paragraphTitle = document.createElement('p');
       const container = this.element.querySelector('.lightbox__container');
       container.innerHTML = '';
       this.alt = alt;
       this.url = url;
+      this.title = title;
       container.appendChild(video);
       video.controls = true;
       video.appendChild(source);
@@ -68,6 +79,8 @@ export class Lightbox {
       source.alt = alt;
       video.appendChild(track);
       track.src = urlVtt;
+      container.appendChild(paragraphTitle);
+      paragraphTitle.innerHTML = this.title;
     }
   }
 
@@ -97,26 +110,36 @@ export class Lightbox {
   next(e) {
     e.preventDefault();
     // On trouve l'index du média et du alt qui correspondent à l'url et au alt
-    let i = this.medias.findIndex((media) => media === this.url);
-    let txt = this.txtAlt.findIndex((elAlt) => elAlt === this.alt);
+    let indexMedia = this.medias.findIndex((media) => media === this.url);
+    let indexTxt = this.txtAlt.findIndex((elAlt) => elAlt === this.alt);
+    let indexTitle = this.arrayTitle.findIndex((elTitle) => elTitle === this.title);
     // Si on arrive à la fin de la galerie, on redéfinit l'index à -1 pour qu'il reparte à zéro
-    if (i === this.medias.length - 1 && txt === this.medias.length - 1) {
-      i = -1;
-      txt = -1;
+    if (indexMedia === this.medias.length - 1
+      && indexTxt === this.medias.length - 1
+      && indexTitle === this.medias.length - 1) {
+      indexMedia = -1;
+      indexTxt = -1;
+      indexTitle = -1;
     }
     // On passe au média suivant
-    this.loadMedias(this.medias[i + 1], this.txtAlt[txt + 1]);
+    this.loadMedias(
+      this.medias[indexMedia + 1],
+      this.txtAlt[indexTxt + 1],
+      this.arrayTitle[indexTitle + 1],
+    );
   }
 
   prev(e) {
     e.preventDefault();
     let i = this.medias.findIndex((media) => media === this.url);
-    let txt = this.txtAlt.findIndex((elAlt) => elAlt === this.alt);
-    if (i === 0 && txt === 0) {
+    let indexTxt = this.txtAlt.findIndex((elAlt) => elAlt === this.alt);
+    let indexTitle = this.arrayTitle.findIndex((elTitle) => elTitle === this.title);
+    if (i === 0 && indexTxt === 0 && indexTitle === 0) {
       i = this.medias.length;
-      txt = this.medias.length;
+      indexTxt = this.medias.length;
+      indexTitle = this.medias.length;
     }
-    this.loadMedias(this.medias[i - 1], this.txtAlt[i - 1]);
+    this.loadMedias(this.medias[i - 1], this.txtAlt[i - 1], this.arrayTitle[i - 1]);
   }
 
   // Construction du DOM
