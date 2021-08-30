@@ -44,7 +44,7 @@ export class Lightbox {
     this.onKeyUp = this.onKeyUp.bind(this);
     // Ajout de l'element lightbox
     document.body.appendChild(this.element);
-    document.addEventListener('keyup', this.onKeyUp);
+    document.addEventListener('keydown', this.onKeyUp);
   }
 
   loadMedias(url, alt, title, urlVtt) {
@@ -84,14 +84,31 @@ export class Lightbox {
     }
   }
 
-  // Gestion des touches
+  // Gestion des touches clavier et du focus
   onKeyUp(e) {
+    const focusableElementsLightbox = Array.from(document.querySelectorAll('.lightbox > button, .lightbox__container > video'));
+    const firstFocusElement = focusableElementsLightbox[0];
+    const lastFocusElement = focusableElementsLightbox[focusableElementsLightbox.length - 1];
     if (e.key === 'Escape') {
       this.close(e);
     } else if (e.key === 'ArrowLeft') {
       this.prev(e);
     } else if (e.key === 'ArrowRight') {
       this.next(e);
+    } else if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (e.target === firstFocusElement) {
+          e.preventDefault();
+          lastFocusElement.focus();
+        }
+      } else if (e.target === lastFocusElement) {
+        e.preventDefault();
+        firstFocusElement.focus();
+      }
+      if (!focusableElementsLightbox.includes(document.activeElement)) {
+        e.preventDefault();
+        firstFocusElement.focus();
+      }
     }
   }
 

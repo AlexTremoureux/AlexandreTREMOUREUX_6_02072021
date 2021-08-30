@@ -36,13 +36,12 @@ export const launchModal = () => {
   modal.setAttribute('aria-hidden', false);
   const btnClose = document.getElementById('close');
   const focusableElementsArray = [...modal.querySelectorAll('input'), btnClose];
-  const focusableElements = focusableElementsArray;
   const firstFocusableElement = focusableElementsArray[0];
   const lastFocusableElement = focusableElementsArray[focusableElementsArray.length - 1];
   // focus sur le premier input du formulaire
   firstFocusableElement.focus();
   // Gestion de la tabulation
-  focusableElements.forEach((focusableElement) => {
+  focusableElementsArray.forEach((focusableElement) => {
     if (focusableElement.addEventListener) {
       focusableElement.addEventListener('keydown', (event) => {
         const tab = event.key === 'Tab';
