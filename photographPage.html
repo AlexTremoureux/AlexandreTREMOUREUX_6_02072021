@@ -27,10 +27,9 @@
     <!-- Formulaire -->
     <div id="myModal" class="modal" role=”dialog” aria-hidden="true">
         <div class="modal-content">
-            <div class="modalTop">
+            <p class="modalTop">
                 <h1 class="modalText modalName">Contactez moi</h1>
-                <span aria-label="Fermer" class="close">&times;</span>
-            </div>
+            </p>
             <h2 class="modalText" id="modalText"></h2>
             <form action="https://cible.php" method="post">
                 <label for='firstName'>Prénom : </label>
@@ -45,8 +44,9 @@
                 <label for='message'>Votre message :</label>
                 <input type='textarea' name='message' id='message' maxlength='200' required aria-required=true aria-invalid=true>
                 <span class='miss'></span>
-                <input type='submit' value='Envoyer' id='btnValidate'>
+                <input type='submit' value='Envoyer' title="Envoyer" id='btnValidate'>
             </form>
+            <button aria-label="Fermer" title="Fermer" id="close" class="close" tabindex="0">&times;</button>
         </div>
     </div>
     <script type ="module" src="./scripts/photographPage.js"></script>

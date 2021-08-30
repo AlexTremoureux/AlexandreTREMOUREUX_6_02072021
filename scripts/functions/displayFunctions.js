@@ -1,6 +1,6 @@
 import { priceInfo, title, modalText } from '../constantes.js';
 
-// Fonction pour passer au contenu
+// Fonction pour passer à la partie contenu de la homePage
 export const goToContent = () => {
   const body = document.querySelector('body');
   body.insertAdjacentHTML('afterbegin',

@@ -52,7 +52,7 @@ export const getPhotographer = (source, filterId) => {
       titleDisplay(photograph.name);
       // Affichage des tags correspondant au photographe
       tagsDisplay(photograph.tags, photograph.id);
-
+      // Définition de la variable firstName
       firstName = photograph.name.split(' ')[0].replace('-', ' ');
     }
   });

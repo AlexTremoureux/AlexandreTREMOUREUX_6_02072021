@@ -85,9 +85,20 @@ input {
 }
 
 .close {
+  position: absolute;
+  top: 18%;
+  right: 5%;
   font-size: 3rem;
   color: white;
   cursor: pointer;
+  background-color: #D3573C;
+  border: none;
+}
+
+@media screen and (min-width: 900px) {
+  .close {
+    top: 13.5%;
+  }
 }
 
 #btnValidate {

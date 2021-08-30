@@ -53,9 +53,17 @@ input {
     font-size: 0.8rem;
 }
 .close {
+    position: absolute;
+    top: 18%;
+    right: 5%;
     font-size: 3rem;
     color: white;
     cursor: pointer;
+    background-color: $color-primary-font;
+    border: none;
+    @media screen and (min-width: 900px) {
+        top: 13.5%;
+    }
 }
 #btnValidate {
     margin-top: 50px;

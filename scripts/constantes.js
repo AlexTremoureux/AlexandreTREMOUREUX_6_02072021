@@ -30,6 +30,7 @@ export const arrayMedia = [];
 export const modalText = document.getElementById('modalText');
 
 // Formulaire
+export const contact = document.getElementById('btnContact');
 export const modal = document.getElementById('myModal');
 export const modalClose = document.querySelector('.close');
 export const formValid = document.getElementById('btnValidate');

@@ -29,18 +29,45 @@ const inputValid = () => {
   return countValidationInput === elInput.length;
 };
 
-// launch modal function
+// launch modal fonction
 export const launchModal = () => {
   modal.style.display = 'flex';
-  modalFirstName.focus();
-  mainWrapper.setAttribute('aria-hidden', 'true');
-  modal.setAttribute('aria-hidden', 'false');
+  mainWrapper.setAttribute('aria-hidden', true);
+  modal.setAttribute('aria-hidden', false);
+  const btnClose = document.getElementById('close');
+  const focusableElementsArray = [...modal.querySelectorAll('input'), btnClose];
+  const focusableElements = focusableElementsArray;
+  const firstFocusableElement = focusableElementsArray[0];
+  const lastFocusableElement = focusableElementsArray[focusableElementsArray.length - 1];
+  // focus sur le premier input du formulaire
+  firstFocusableElement.focus();
+  // Gestion de la tabulation
+  focusableElements.forEach((focusableElement) => {
+    if (focusableElement.addEventListener) {
+      focusableElement.addEventListener('keydown', (event) => {
+        const tab = event.key === 'Tab';
+        if (!tab) {
+          return;
+        }
+        // Si retour arrière avec shift + tab sur le formulaire:
+        if (event.shiftKey) {
+          if (event.target === firstFocusableElement) {
+            event.preventDefault();
+            lastFocusableElement.focus();
+          }
+        } else if (event.target === lastFocusableElement) { // Avec tab
+          event.preventDefault();
+          firstFocusableElement.focus();
+        }
+      });
+    }
+  });
 };
-// close modal function
+// close modal fonction
 export const closeModal = () => {
   modal.style.display = 'none';
-  mainWrapper.setAttribute('aria-hidden', 'false');
-  modal.setAttribute('aria-hidden', 'true');
+  mainWrapper.setAttribute('aria-hidden', false);
+  modal.setAttribute('aria-hidden', true);
 };
 // fonction de validation avant envoi du Formulaire
 export const validation = (event) => {
